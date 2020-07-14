@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="header__logo">
+    <a href="/">
+      <span class="sr-only">Middlebury Magazine</span>
+      <img src="/img/middmag-logo.svg" alt="" />
+    </a>
+    <a href="#recent-stories" class="header__recent">Recent Stories</a>
+  </div>
+
+  <div class="header__nav">
+    <nav>
+      <button>Menu</button>
+
+      <div class="header__navs">
+        <ul class="nav">
+          {% for item in primary_menu %}
+            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+          {% endfor %}
+        </ul>
+        <ul class="nav nav--secondary">
+          {% for item in secondary_menu %}
+            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+
+    <div class="header__search">
+      <form action="/search">
+        <label for="search">Search</label>
+        <input type="search" id="search" placeholder="Enter your keywords..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</header>

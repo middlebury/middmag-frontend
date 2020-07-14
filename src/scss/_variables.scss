@@ -1,0 +1,103 @@
+// grid
+
+$grid-columns: 12;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+$grid-gutter-widths: (
+  xs: 32px,
+  lg: 40px
+);
+
+$container-max-widths: (
+  lg: 1300px
+);
+
+$story-container-max-widths: (
+  xs: 640px
+);
+
+$story-container-max-widths-md: (
+  xs: 865px
+);
+
+// colors
+
+$color-primary: #003a6c;
+$color-secondary: #75a3cd;
+$color-tamarillo: #9d1a1e;
+$color-ghost-white: #f8fbfd;
+$color-keppel: #3aa59f;
+$color-buddha-gold: #c09607;
+
+$white: #fff;
+$black: #000;
+
+$gray: #6f6e6e;
+$gray-dark: #323232;
+
+// spacing
+
+$space-0: 0;
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 24px;
+$space-4: 32px;
+$space-5: 48px;
+$space-6: 64px;
+$space-7: 96px;
+
+// typography
+
+$font-sans: 'Verlag A', 'Verlag B', verdana, sans-serif;
+$font-serif: 'Hoefler Text A', 'Hoefler Text B', georgia, serif;
+
+$text-xs: 12px;
+$text-sm: 14px;
+$text-md: 16px;
+$text-lg: 18px;
+$text-3xl: 20px;
+$text-xl: 32px;
+$text-2xl: 48px;
+$text-3xl: 55px;
+
+$leading-none: 1;
+$leading-body: 1.7;
+$leading-heading: 1.2;
+
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// specifics
+
+$header-height: 62px;
+
+/*
+// font-size: 100px;
+font-size: 12px;
+font-size: 14px;
+// font-size: 15px;
+font-size: 16px;
+// font-size: 17px;
+font-size: 18px;
+// font-size: 1rem;
+font-size: 20px;
+// font-size: 21px;
+font-size: 24px;
+// font-size: 27px;
+font-size: 28px;
+// font-size: 30px;
+font-size: 32px;
+font-size: 36px;
+font-size: 48px;
+font-size: 55px;
+*/

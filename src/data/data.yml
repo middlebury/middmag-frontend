@@ -1,0 +1,51 @@
+site_name: Middlebury Magazine
+
+primary_menu:
+  - text: features
+    url: /category/features
+  - text: pursuits
+    url: /category/pursuits
+  - text: q&a
+    url: /category/qa
+  - text: editor’s note
+    url: /category/editors-note
+  - text: old chapel
+    url: /category/old-chapel
+  - text: road taken
+    url: /category/road-taken
+  - text: review
+    url: /category/review
+  - text: podcasts
+    url: /category/podcasts
+  - text: videos
+    url: /category/videos
+  - text: how did you get here series
+    url: /category/how-did-you-get-here
+
+secondary_menu:
+  - text: about
+    url: /about
+  - text: advertising
+    url: /advertising
+  - text: contact
+    url: /contact
+  - text: support
+    url: /support
+  - text: writers’ guidelines
+    url: /writers-guidelines
+
+footer_menu:
+  - text: Alumni
+    url: http://www.middlebury.edu/giving
+  - text: Newsroom
+    url: http://www.middlebury.edu/newsroom
+  - text: Contact us
+    url: /contact
+
+social_menu:
+  - text: Middlebury Magazine on Instagram
+    icon: instagram
+    url: https://www.instagram.com/middleburymagazine/
+  - text: Middlebury Magazine on Twitter
+    icon: twitter
+    url: https://twitter.com/middleburymag

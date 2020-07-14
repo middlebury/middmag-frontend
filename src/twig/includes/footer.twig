@@ -1,0 +1,31 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer__logo">
+        <a href="http://www.middlebury.edu">
+          <img src="/img/midd-shield.svg" alt="Middlebury College" width="50" />
+        </a>
+      </div>
+      <div class="footer__nav">
+        <nav class="">
+          <ul class="">
+            {% for item in footer_menu %}
+              <li class=""><a href="{{ item.url }}">{{ item.text }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__social">
+        <ul class="">
+          {% for item in social_menu %}
+            <li class="">
+              <a href="{{ item.url }}">
+                <span class="sr-only">{{ item.text }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

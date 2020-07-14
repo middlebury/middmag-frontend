@@ -1,0 +1,66 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: $gray-dark;
+  font-family: $font-sans;
+  font-size: 1rem;
+  background-color: $white;
+}
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  margin: 0;
+}

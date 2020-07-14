@@ -1,0 +1,7 @@
+@function em($target, $base: 16) {
+  @return $target / $base * 1em;
+}
+
+@function aspect-ratio($width, $height) {
+  @return ($height / $width) * 100%;
+}
