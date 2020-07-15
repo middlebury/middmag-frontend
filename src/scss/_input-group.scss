@@ -1,0 +1,11 @@
+.input-group {
+  display: flex;
+
+  > .text-input {
+    flex: 1;
+  }
+
+  > .btn {
+    flex: 0 0 auto;
+  }
+}

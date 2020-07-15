@@ -14,18 +14,42 @@
 @import 'icon';
 @import 'header';
 @import 'footer';
+@import 'post';
+@import 'input-group';
 
 // utils
 @import 'screen-reader';
 
-.input-group {
+.h2,
+.h3,
+.h4 {
+  font-family: $font-serif;
+  line-height: $leading-heading;
+  font-weight: $font-normal;
+}
+
+.h2 {
+  font-size: $text-3xl;
+}
+.h3 {
+  font-size: $text-2xl;
+}
+.h4 {
+  font-size: $text-xl;
+}
+
+.meta {
   display: flex;
+  margin-bottom: $space-2;
+}
+.meta__item {
+}
+.meta__link {
+  @include small-caps;
+  font-size: $text-xs;
+  color: $color-sky;
 
-  > .text-input {
-    flex: 1;
-  }
-
-  > .btn {
-    flex: 0 0 auto;
+  &:hover {
+    color: $color-navy;
   }
 }

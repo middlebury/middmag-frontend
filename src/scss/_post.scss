@@ -1,0 +1,56 @@
+.post {
+  position: relative;
+}
+
+.post--sticky {
+  margin-bottom: 200px;
+}
+.post__media {
+  @include breakpoint(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.post__content {
+  padding: $space-2 $grid-gutter-width / 2;
+
+  @include breakpoint(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.post__header {
+  border-top: 1px solid $black;
+  margin-bottom: $space-2;
+}
+
+.post__footer {
+  border-top: 1px solid $black;
+}
+
+.post__title {
+  margin-bottom: $space-2;
+}
+
+.post__link {
+  color: $color-sky;
+}
+
+.post__text {
+  font-size: $text-sm;
+  margin-bottom: $space-4;
+}
+
+.post__continue {
+  @include small-caps;
+  color: $color-sky;
+  @include hover-shift;
+}
