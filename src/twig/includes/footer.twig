@@ -1,34 +1,41 @@
 <footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="footer__logo">
-        <a href="http://www.middlebury.edu">
-          <span class="sr-only">Middlebury</span>
-          <svg focusable="false" aria-hidden="true" width="42" height="47">
-            <use xlink:href="#midd-shield" />
-          </svg>
-        </a>
-      </div>
-      <div class="footer__nav">
-        <nav class="">
-          <ul class="">
-            {% for item in footer_menu %}
-              <li class=""><a href="{{ item.url }}">{{ item.text }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__social">
-        <ul class="">
-          {% for item in social_menu %}
-            <li class="">
-              <a href="{{ item.url }}">
-                <span class="sr-only">{{ item.text }}</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+  <div class="footer__main">
+    <a href="http://www.middlebury.edu" class="footer__logo">
+      <span class="sr-only">Middlebury</span>
+      <svg focusable="false" aria-hidden="true" width="42" height="47">
+        <use xlink:href="#midd-shield" />
+      </svg>
+    </a>
+    <ul class="footer__nav">
+      {% for item in footer_menu %}
+        <li class="footer__item">
+          <a href="{{ item.url }}" class="footer__link">{{ item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="footer__social">
+      {% for item in social_menu %}
+        <li class="footer__item">
+          <a href="{{ item.url }}" class="footer__link">
+            <span class="sr-only">{{ item.text }}</span>
+            {% include 'includes/icon.twig' with {
+              name: item.icon,
+              class: 'footer__icon'
+            } %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="footer__copyright">
+    <p class="footer__text">
+      The views presented are not necessarily those of the editors or the
+      official policies of the College.
+    </p>
+
+    <p class="footer__text">
+      &copy; 2020 Middlebury College Publications.
+    </p>
   </div>
 </footer>
