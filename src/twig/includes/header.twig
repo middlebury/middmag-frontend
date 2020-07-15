@@ -9,7 +9,19 @@
 
   <div class="header__nav">
     <nav>
-      <button>Menu</button>
+      <button>
+        <span>
+          {% include 'includes/icon.twig' with {
+            name: 'bars'
+          } %}
+        </span>
+        <span>
+          {% include 'includes/icon.twig' with {
+            name: 'times'
+          } %}
+        </span>
+        <span>Menu</span>
+      </button>
 
       <div class="header__navs">
         <ul class="nav">
