@@ -2,10 +2,188 @@
   background: $black;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  padding-right: $space-3;
+  padding-left: $space-3;
 }
 
 .header__logo {
+  display: flex;
+  align-items: center;
+  padding-top: $space-2;
+  padding-bottom: $space-2;
+}
+
+.header__recent {
+  padding-left: $space-4;
+  margin-left: $space-4;
+  border-left: 1px solid $white;
+  display: none;
+
+  @include breakpoint(md) {
+    display: block;
+  }
+
+  a {
+    @include small-caps;
+    color: $white;
+  }
+}
+
+.header__recent--menu {
+  border-bottom: 1px solid $white;
+  padding-left: $space-3;
+  padding-right: $space-3;
+  display: block;
+}
+
+.header__dropdowns {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  border-top: 2px solid $white;
+  padding-left: $space-4;
+  padding-right: $space-4;
+  max-height: calc(100vh - 62px);
+  overflow-y: auto;
+  width: 100%;
+  @include breakpoint(sm) {
+    min-width: 330px;
+    width: auto;
+  }
+}
+
+.header__menu,
+.header__search-form {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background: $black;
 }
 
 .header__nav {
+  &.is-toggled .header__menu {
+    display: block;
+  }
+}
+
+.header__search {
+  border-left: 1px solid $white;
+  padding-left: $space-1;
+  margin-left: $space-1;
+
+  &.is-toggled .header__search-form {
+    display: block;
+  }
+}
+
+.header__search-form {
+  padding: $space-2;
+  width: 100%;
+}
+
+.header__btn {
+  @include small-caps;
+  color: $white;
+  padding: $space-3;
+  display: inline-block;
+  margin-top: -$space-3;
+  margin-bottom: -$space-3;
+
+  &:focus {
+    outline: 1px dashed $white;
+  }
+}
+
+.header__btn-text {
+  display: none;
+  margin-left: $space-2;
+
+  @include breakpoint(sm) {
+    display: inline;
+  }
+}
+
+.header__icon {
+}
+
+.header__bars {
+  .header__btn.is-toggled & {
+    display: none;
+  }
+}
+
+.header__times {
+  display: none;
+
+  .header__btn.is-toggled & {
+    display: inline-block;
+  }
+}
+
+// nav lists
+
+.nav {
+  padding-top: $space-4;
+  padding-bottom: $space-4;
+}
+
+.nav__item {
+}
+
+.nav__item--recent {
+  border-bottom: 1px solid $white;
+  padding-bottom: $space-4;
+  margin-bottom: $space-4;
+
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.nav__link {
+  @include small-caps;
+  display: block;
+  padding-top: $space-2;
+  padding-bottom: $space-2;
+  transition: transform 0.2s;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    transform: translateX($space-2);
+  }
+}
+
+.nav--secondary {
+  border-top: 1px solid $white;
+
+  .nav__link {
+    font-weight: $font-normal;
+    font-size: $text-xs;
+  }
+}
+
+// headroom
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  body:not(.has-toggled-elem) & {
+    transform: translateY(-100%);
+  }
 }

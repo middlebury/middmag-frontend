@@ -1,6 +1,7 @@
 // config
 @import 'functions';
 @import 'variables';
+@import 'mixins';
 
 // base
 @import '../../node_modules/normalize.css/normalize';
@@ -10,17 +11,21 @@
 @import 'layout';
 
 // components
+@import 'icon';
 @import 'header';
 @import 'footer';
 
 // utils
 @import 'screen-reader';
 
-.icon {
-  width: 1em;
-  height: 1em;
+.input-group {
+  display: flex;
 
-  svg {
-    fill: currentColor;
+  > .text-input {
+    flex: 1;
+  }
+
+  > .btn {
+    flex: 0 0 auto;
   }
 }

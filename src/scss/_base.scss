@@ -12,13 +12,8 @@ body {
 }
 
 a {
-  color: $color-secondary;
+  color: currentColor;
   text-decoration: none;
-  transition: color 0.2s;
-
-  &:hover {
-    color: $color-primary;
-  }
 }
 
 p {
@@ -63,4 +58,22 @@ h5,
 h6 {
   font-size: 1rem;
   margin: 0;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+svg {
+  fill: currentColor;
 }

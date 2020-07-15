@@ -1,48 +1,77 @@
-<header class="header">
+<header class="header js-header">
   <div class="header__logo">
     <a href="/">
       <span class="sr-only">Middlebury Magazine</span>
-      <img src="/img/middmag-logo.svg" alt="" />
+      <svg focusable="false" aria-hidden="true" width="186" height="46">
+        <use xlink:href="#middmag-logo" />
+      </svg>
     </a>
-    <a href="#recent-stories" class="header__recent">Recent Stories</a>
+
+    <div class="header__recent">
+      <a href="#recent-stories" class="js-recent">Recent Stories</a>
+    </div>
   </div>
 
-  <div class="header__nav">
-    <nav>
-      <button>
-        <span>
-          {% include 'includes/icon.twig' with {
-            name: 'bars'
-          } %}
-        </span>
-        <span>
-          {% include 'includes/icon.twig' with {
-            name: 'times'
-          } %}
-        </span>
-        <span>Menu</span>
+  <div class="header__dropdowns">
+    <nav class="header__nav js-nav">
+      <button class="header__btn"
+        data-toggle-target=".js-nav"
+        data-toggle-onoutsideclickof=".js-nav">
+        {% include 'includes/icon.twig' with {
+          name: 'bars',
+          class: 'header__bars'
+        } %}
+        {% include 'includes/icon.twig' with {
+          name: 'times',
+          class: 'header__times'
+        } %}
+        <span class="header__btn-text">Menu</span>
       </button>
 
-      <div class="header__navs">
+      <div class="header__menu">
         <ul class="nav">
+          <li class="nav__item nav__item--recent">
+            <a href="#recent-stories" class="nav__link js-recent">
+              Recent Stories
+            </a>
+          </li>
           {% for item in primary_menu %}
-            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+            <li class="nav__item">
+              <a href="{{ item.url }}" class="nav__link">{{ item.text }}</a>
+            </li>
           {% endfor %}
         </ul>
         <ul class="nav nav--secondary">
           {% for item in secondary_menu %}
-            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+            <li class="nav__item">
+              <a href="{{ item.url }}" class="nav__link">{{ item.text }}</a>
+            </li>
           {% endfor %}
         </ul>
       </div>
     </nav>
 
-    <div class="header__search">
-      <form action="/search">
-        <label for="search">Search</label>
-        <input type="search" id="search" placeholder="Enter your keywords..." />
-        <button type="submit">Search</button>
-      </form>
+    <div class="header__search js-header-search">
+      <button class="header__btn"
+        data-toggle-target=".js-header-search"
+        data-toggle-onoutsideclickof=".js-header-search">
+        <span class="sr-only">Search</span>
+        {% include 'includes/icon.twig' with {
+          name: 'search'
+        } %}
+      </button>
+      <div class="header__search-form">
+        <form action="/search">
+          <label for="search" class="sr-only">Search</label>
+          <div class="input-group">
+            <input type="search"
+              id="search"
+              placeholder="Enter your keywords..."
+              class="text-input" />
+            <button type="submit" class="btn btn--light">Search</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </header>

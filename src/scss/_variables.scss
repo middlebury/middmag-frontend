@@ -2,9 +2,9 @@
 
 $grid-columns: 12;
 
-$grid-breakpoints: (
+$breakpoints: (
   xs: 0,
-  sm: 320px,
+  sm: 512px,
   md: 768px,
   lg: 1024px,
   xl: 1440px
@@ -47,11 +47,12 @@ $gray-dark: #323232;
 $space-0: 0;
 $space-1: 4px;
 $space-2: 8px;
-$space-3: 24px;
-$space-4: 32px;
-$space-5: 48px;
-$space-6: 64px;
-$space-7: 96px;
+$space-3: 16px;
+$space-4: 24px;
+$space-5: 32px;
+$space-6: 48px;
+$space-7: 64px;
+$space-8: 96px;
 
 // typography
 
@@ -70,6 +71,8 @@ $text-3xl: 55px;
 $leading-none: 1;
 $leading-body: 1.7;
 $leading-heading: 1.2;
+
+$tracking-wide: 0.15em;
 
 $font-light: 300;
 $font-normal: 400;

@@ -22,23 +22,23 @@ if (isTouchDevice) {
 
 // HACK: Closes the open mobile nav when Recent Stories link is clicked/tapped.
 // We should extend toggler functionality to handle this use case instead of hacking it in.
-const jumplink = document.querySelector('.js-shortcut-link');
+const jumplink = document.querySelector('.js-recent');
 
-jumplink.addEventListener('click', (e) => {
+jumplink.addEventListener('click', e => {
   const togglers = document.querySelectorAll('.is-toggled');
 
-  [].forEach.call(togglers, (toggler) => {
+  [].forEach.call(togglers, toggler => {
     toggler.classList.remove('is-toggled');
   });
 });
 
 // transcript togglers
 const transcripts = document.querySelectorAll('.js-transcript');
-[].forEach.call(transcripts, (el) => {
+[].forEach.call(transcripts, el => {
   const btn = el.querySelector('.transcript-button');
   const content = el.querySelector('.transcript-content');
 
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', e => {
     btn.classList.toggle('is-active');
     content.classList.toggle('is-open');
   });
