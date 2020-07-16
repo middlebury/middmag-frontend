@@ -1,0 +1,83 @@
+.dispatches {
+  position: relative;
+  padding: $space-3;
+  background: $color-water;
+}
+
+.dispatches-btn {
+  height: 3rem;
+  width: 3rem;
+  background: $white;
+  border-radius: 100%;
+  box-shadow: 0 0 8px rgba(black, 0.2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, transform 0.4s;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+
+  &:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0;
+  }
+}
+
+.dispatches-btn-next {
+  right: 4px;
+}
+
+.dispatches-btn-prev {
+  left: 4px;
+}
+
+.dispatches-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $black;
+
+  a {
+    color: $white;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 2px solid $color-sky;
+    padding-bottom: 4px;
+    transition: border-color 0.4s, background-color 0.4s;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+// post modifications
+.dispatches {
+  .swiper-slide {
+    height: auto; // makes all items match height of tallest item
+  }
+
+  .post {
+    background: $white;
+    padding: $space-2;
+    border-top: 2px solid $black;
+  }
+
+  .post__meta {
+    border: 0;
+    display: block;
+  }
+}

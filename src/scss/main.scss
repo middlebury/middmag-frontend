@@ -5,6 +5,7 @@
 
 // base
 @import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/swiper/swiper';
 @import 'base';
 
 // objects
@@ -15,6 +16,7 @@
 @import 'header';
 @import 'footer';
 @import 'post';
+@import 'dispatches';
 @import 'input-group';
 @import 'stories';
 @import 'quote';

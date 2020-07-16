@@ -1,3 +1,22 @@
-<div class="dispatches">
-  dispatches
+<div class="dispatches swiper-container js-dispatches">
+  <ul class="swiper-wrapper">
+    {% for item in 0..5 %}
+      <li class="swiper-slide">{% include 'includes/post-teaser.twig' %}</li>
+    {% endfor %}
+
+    <li class="swiper-slide dispatches-more"><a href="">View all</a></li>
+  </ul>
+
+  <button class="dispatches-btn dispatches-btn-prev js-prev">
+    <span class="sr-only">Previous</span>
+    {% include 'includes/icon.twig' with {
+      name: 'chevron-left'
+    } %}
+  </button>
+  <button class="dispatches-btn dispatches-btn-next js-next">
+    <span class="sr-only">Next</span>
+    {% include 'includes/icon.twig' with {
+      name: 'chevron-right'
+    } %}
+  </button>
 </div>
