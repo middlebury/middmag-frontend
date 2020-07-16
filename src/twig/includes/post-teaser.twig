@@ -1,0 +1,36 @@
+<article class="post">
+  <figure class="post__media">
+    <a href=""><img src="http://placehold.it/720x405" alt="" /></a>
+  </figure>
+  <h4 class="post__title">
+    <a href="" class="post__link">
+      Lorem ipsum dolor sit amet{% if video %}
+        {% include 'includes/icon.twig' with {
+          name: 'play-circle',
+          class: 'post__icon'
+        } %}
+      {% endif %}
+    </a>
+  </h4>
+  <p class="post__text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ullamco{% if
+      random(2) %}
+      deserunt cupidatat elit ea cupidatat quis eu veniam excepteur incididunt
+      deserunt cupidatat elit ea cupidatat quis eu veniam excepteur incididunt
+      nisi.
+    {% endif %}
+  </p>
+  <div class="post__meta">
+    <div class="post__credits">
+      <p>
+        by Author name
+      </p>
+      <p>
+        Illustration by Illustrator Name
+      </p>
+    </div>
+    <div class="post__date">
+      <time>February 25, 2020</time>
+    </div>
+  </div>
+</article>

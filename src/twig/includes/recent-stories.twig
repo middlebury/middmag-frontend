@@ -1,0 +1,131 @@
+<section id="recent-stories"
+  aria-labelledby="recent-stories-label"
+  class="stories">
+  <h2 class="stories__label" id="recent-stories-label">
+    Recent stories
+  </h2>
+
+  <div class="container">
+    <div class="stories__section">
+      <h3 class="stories__title">
+        <a href="">Features</a>
+      </h3>
+
+      <ul class="grid grid-gap grid-cols-2 grid-rows-2">
+        {% for item in 0..3 %}
+          <li>{% include 'includes/post-teaser.twig' %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="stories__section">
+      <h3 class="stories__title">
+        <a href="">Dispatches</a>
+      </h3>
+      {% include 'includes/dispatches.twig' %}
+    </div>
+
+    <div class="grid grid-gap grid-cols-2">
+      <div class="stories__section">
+        <h3 class="stories__title">
+          <a href="">Pursuits</a>
+        </h3>
+        {% include 'includes/post-teaser.twig' %}
+      </div>
+
+      <div class="stories__section">
+        <h3 class="stories__title">
+          <a href="">Q&A</a>
+        </h3>
+        {% include 'includes/post-teaser.twig' %}
+      </div>
+    </div>
+
+    <div class="grid grid-gap grid-cols-3">
+      <div class="stories__section">
+        <h3 class="stories__title">
+          <a href="">Editor's Note</a>
+        </h3>
+        {% include 'includes/post-teaser.twig' %}
+      </div>
+
+      <div class="stories__section">
+        <h3 class="stories__title">
+          <a href="">Old Chapel</a>
+        </h3>
+        {% include 'includes/post-teaser.twig' %}
+      </div>
+
+      <div class="stories__section">
+        <h3 class="stories__title">
+          <a href="">Road Taken</a>
+        </h3>
+        {% include 'includes/post-teaser.twig' %}
+      </div>
+    </div>
+
+    <div class="stories__section">
+      {% include 'includes/quote.twig' %}
+    </div>
+
+    <div class="grid grid-gap grid-cols-3">
+      {# 1st col #}
+      <div>
+        <div class="stories__section">
+          <h3 class="stories__title">
+            <a href="">Podcasts</a>
+          </h3>
+
+          <ul class="">
+            {% for item in 0..3 %}
+              <li>{% include 'includes/post-teaser.twig' %}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      {# 2nd col #}
+      <div>
+        <div class="stories__section">
+          <h3 class="stories__title">
+            <a href="">Review</a>
+          </h3>
+
+          <ul class="">
+            <li>{% include 'includes/post-teaser.twig' %}</li>
+          </ul>
+        </div>
+
+        <div class="stories__section">
+          <h3 class="stories__title">
+            <a href="">How did you get here?</a>
+          </h3>
+
+          <ul class="">
+            {% for item in 0..2 %}
+              <li>{% include 'includes/post-teaser.twig' %}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      {# 3rd col #}
+      <div>
+        <div class="stories__section">
+          <h3 class="stories__title">
+            <a href="">Videos</a>
+          </h3>
+          <ul class="">
+            {% for item in 0..3 %}
+              <li>
+                {% include 'includes/post-teaser.twig' with {
+                  video: true
+                } %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

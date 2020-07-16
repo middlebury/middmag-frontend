@@ -1,0 +1,50 @@
+$quote-border-width: 4px;
+.quote {
+  padding-bottom: $space-3;
+  border-bottom: $quote-border-width solid $color-buddha-gold;
+}
+
+.quote__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: $space-3;
+
+  &:after {
+    content: '';
+    display: block;
+    background: $color-buddha-gold;
+    flex: 1;
+    height: $quote-border-width;
+    margin-left: $space-2;
+  }
+}
+
+.quote__title {
+  flex: 0 0 auto;
+  color: $color-buddha-gold;
+  @include small-caps;
+}
+
+.quote__text {
+  color: $color-buddha-gold;
+  font-size: $text-3xl;
+  font-family: $font-serif;
+  font-style: italic;
+  line-height: $leading-heading;
+  margin-bottom: $space-3;
+  position: relative;
+
+  &:before {
+    content: '“';
+    position: absolute;
+    top: 0;
+    right: 100%;
+  }
+}
+
+.quote__cite {
+  a {
+    text-decoration: underline;
+    @include link;
+  }
+}

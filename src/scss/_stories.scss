@@ -1,0 +1,45 @@
+.stories {
+}
+
+.stories__label {
+  @include small-caps;
+  text-align: center;
+  border-top: 2px solid $black;
+  margin-bottom: $space-8;
+  padding-top: $space-1;
+}
+
+.stories__section {
+  margin-bottom: $space-8;
+}
+
+.stories__title {
+  margin-bottom: $space-3;
+
+  @include breakpoint(md) {
+    margin-bottom: $space-4;
+  }
+
+  @include breakpoint(md) {
+    margin-bottom: $space-5;
+  }
+
+  a {
+    display: block;
+    background: $black;
+    text-align: center;
+    border-top: 2px solid $black;
+    @include small-caps;
+    font-size: $text-sm;
+    color: $white;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    transition: background 0.2s;
+
+    &:focus,
+    &:hover {
+      color: $black;
+      background: none;
+    }
+  }
+}

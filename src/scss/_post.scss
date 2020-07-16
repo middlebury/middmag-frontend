@@ -1,6 +1,9 @@
 .post {
   position: relative;
-  display: block;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin-bottom: $space-4;
 }
 
 .post__container {
@@ -8,20 +11,28 @@
   display: flex;
 }
 
-.post__media {
-  @include breakpoint(md) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.post__icon {
+  margin-left: auto;
+}
 
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
+.post__media {
+  margin-bottom: $space-3;
+}
+
+.post__meta {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: $text-sm;
+  border-bottom: 1px solid $black;
+  padding-bottom: $space-2;
+}
+
+.post__date {
+  @include small-caps;
+  font-size: $text-xs;
+  font-weight: $font-normal;
 }
 
 .post__overlay {
@@ -88,15 +99,31 @@
 .post--sticky {
   margin-bottom: 12rem;
 
+  @include breakpoint(md) {
+    height: 100vh;
+    height: calc(100vh - var(--header-height));
+  }
+
+  .post__media {
+    @include breakpoint(md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   .post__title {
     @include breakpoint(md) {
       font-size: $text-4xl;
     }
-  }
-
-  @include breakpoint(md) {
-    height: 100vh;
-    height: calc(100vh - var(--header-height));
   }
 }
 
