@@ -1,5 +1,8 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-  {% include 'includes/post-sticky.twig' %}
+  {% include 'includes/post-sticky.twig' with {
+    position: 'bottom-left',
+    theme: 'light'
+  } %}
 {% endblock %}

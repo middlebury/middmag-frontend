@@ -1,10 +1,13 @@
 .post {
   position: relative;
+  display: block;
 }
 
-.post--sticky {
-  margin-bottom: 200px;
+.post__container {
+  height: 100%;
+  display: flex;
 }
+
 .post__media {
   @include breakpoint(md) {
     position: absolute;
@@ -12,45 +15,137 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
-.post__content {
-  padding: $space-2 $grid-gutter-width / 2;
-
+.post__overlay {
   @include breakpoint(md) {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
   }
 }
 
-.post__header {
-  border-top: 1px solid $black;
-  margin-bottom: $space-2;
+.post__box {
+  @include breakpoint(md) {
+    display: flex;
+    height: 100%;
+  }
 }
 
-.post__footer {
+.post__item {
+  padding-top: $space-2;
+
+  @include breakpoint(md) {
+    width: calc(100% / 3);
+  }
+}
+
+.post__content {
   border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
 }
 
 .post__title {
   margin-bottom: $space-2;
+  font-size: $text-2xl;
+  @include heading;
 }
 
 .post__link {
-  color: $color-sky;
+  @include link;
 }
 
 .post__text {
   font-size: $text-sm;
   margin-bottom: $space-4;
+
+  @include breakpoint(md) {
+    font-size: $text-md;
+  }
 }
 
 .post__continue {
   @include small-caps;
-  color: $color-sky;
   @include hover-shift;
+  display: block;
+  padding-top: $space-1;
+  padding-bottom: $space-1;
+}
+
+// modifiers
+
+.post--sticky {
+  margin-bottom: 12rem;
+
+  .post__title {
+    @include breakpoint(md) {
+      font-size: $text-4xl;
+    }
+  }
+
+  @include breakpoint(md) {
+    height: 100vh;
+    height: calc(100vh - var(--header-height));
+  }
+}
+
+// alignments
+
+$post-box-alignments: (
+  top-left: (
+    items: flex-start,
+    justify: flex-start
+  ),
+  bottom-left: (
+    items: flex-end,
+    justify: flex-start
+  ),
+  top-right: (
+    items: flex-start,
+    justify: flex-end
+  ),
+  bottom-right: (
+    items: flex-end,
+    justify: flex-end
+  )
+);
+
+@each $name, $aligns in $post-box-alignments {
+  .post--#{$name} .post__box {
+    @include breakpoint(md) {
+      align-items: map-get($aligns, 'items');
+      justify-content: map-get($aligns, 'justify');
+    }
+  }
+}
+
+// post themes
+
+// only change colors at large screen since content overlays background image/video
+.post--light {
+  @include breakpoint(md) {
+    .post__content {
+      border-color: $white;
+    }
+
+    .post__text,
+    .meta__link,
+    .post__link {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
 }

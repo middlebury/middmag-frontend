@@ -1,27 +1,34 @@
-<arcticle class="post post--sticky">
+{% set position = position|default('bottom-right') %}
+{% set theme = theme|default('light') %}
+
+<arcticle class="post post--sticky post--{{ position }} post--{{ theme }}">
   <figure class="post__media">
     <img src="http://middleburymagazine.com/files/2020/06/feature_campus_opener_ALT-880x495.png"
       alt="" />
   </figure>
 
   {# alignments here #}
-  <div class="post__content">
-    <div class="post__header">
-      <ul class="meta">
-        <li class="meta__item">
-          <a href="" class="meta__link">Summer 2020</a>
-        </li>
-      </ul>
-      <h2 class="h2 post__title">
-        <a href="" class="post__link">Where Do We Go From Here?</a>
-      </h2>
-      <p class="post__text">
-        A campus empties, and a college newspaper must figure out how to
-        continue operations when everyone has scattered in the wind.
-      </p>
-    </div>
-    <div class="post__footer">
-      <a href="" class="post__continue">Continue to story &rsaquo;</a>
+  <div class="post__overlay">
+    <div class="post__box container">
+      <div class="post__item">
+        <div class="post__content">
+          <ul class="meta">
+            <li class="meta__item">
+              <a href="" class="meta__link">Summer 2020</a>
+            </li>
+          </ul>
+          <h2 class="post__title">
+            <a href="" class="post__link">Where Do We Go From Here?</a>
+          </h2>
+          <p class="post__text">
+            A campus empties, and a college newspaper must figure out how to
+            continue operations when everyone has scattered in the wind.
+          </p>
+        </div>
+        <a href="" class="post__link post__continue">
+          Continue to story &rsaquo;
+        </a>
+      </div>
     </div>
   </div>
 </arcticle>

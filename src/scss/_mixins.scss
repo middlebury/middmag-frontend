@@ -13,8 +13,27 @@
 
 @mixin hover-shift {
   transition: transform 0.2s;
-  &:focus,
   &:hover {
     transform: translateX($space-2);
+  }
+}
+
+@mixin heading {
+  font-family: $font-serif;
+  line-height: $leading-heading;
+  font-weight: $font-normal;
+}
+
+@mixin h2 {
+  @include heading;
+  font-size: $text-3xl;
+}
+
+@mixin link {
+  color: $color-sky;
+  transition: color 0.2s, transform 0.2s;
+
+  &:hover {
+    color: $color-navy;
   }
 }

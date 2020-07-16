@@ -46,10 +46,6 @@
 }
 .meta__link {
   @include small-caps;
+  @include link;
   font-size: $text-xs;
-  color: $color-sky;
-
-  &:hover {
-    color: $color-navy;
-  }
 }
