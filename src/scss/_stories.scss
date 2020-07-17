@@ -11,6 +11,7 @@
 
 .stories__section {
   margin-bottom: $space-8;
+  max-height: 100%; // makes sections in grid line up to bottoms
 }
 
 .stories__title {
@@ -42,4 +43,37 @@
       background: none;
     }
   }
+}
+
+.stories__grid {
+  @include breakpoint(md) {
+    display: grid;
+  }
+
+  margin-left: $grid-gutter-width / -2;
+  margin-right: $grid-gutter-width / -2;
+  margin-left: calc(var(--gutter-width) / -2);
+  margin-right: calc(var(--gutter-width) / -2);
+
+  > * {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+    padding-left: calc(var(--gutter-width) / 2);
+    padding-right: calc(var(--gutter-width) / 2);
+  }
+}
+
+.stories__grid--2x2 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.stories__grid--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.stories__grid--2 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }

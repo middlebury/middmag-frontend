@@ -11,7 +11,7 @@
         <a href="">Features</a>
       </h3>
 
-      <ul class="grid grid-gap grid-cols-2 grid-rows-2">
+      <ul class="stories__grid stories__grid--2x2">
         {% for item in 0..3 %}
           <li>{% include 'includes/post-teaser.twig' %}</li>
         {% endfor %}
@@ -25,7 +25,7 @@
       {% include 'includes/dispatches.twig' %}
     </div>
 
-    <div class="grid grid-gap grid-cols-2">
+    <div class="stories__grid stories__grid--2">
       <div class="stories__section">
         <h3 class="stories__title">
           <a href="">Pursuits</a>
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div class="grid grid-gap grid-cols-3">
+    <div class="stories__grid stories__grid--3">
       <div class="stories__section">
         <h3 class="stories__title">
           <a href="">Editor's Note</a>
@@ -68,7 +68,7 @@
       {% include 'includes/quote.twig' %}
     </div>
 
-    <div class="grid grid-gap grid-cols-3">
+    <div class="stories__grid stories__grid--3">
       {# 1st col #}
       <div>
         <div class="stories__section">
