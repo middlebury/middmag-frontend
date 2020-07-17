@@ -3,7 +3,7 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  margin-bottom: $space-4;
+  padding-bottom: $space-4;
 }
 
 .post__container {
@@ -17,6 +17,7 @@
 
 .post__media {
   margin-bottom: $space-3;
+  flex: 0 0 auto; // fixes ie11 where posts get tall
 }
 
 .post__meta {
@@ -26,7 +27,7 @@
   justify-content: space-between;
   font-size: $text-sm;
   border-bottom: 1px solid $black;
-  padding-bottom: $space-2;
+  padding-bottom: $space-1;
 }
 
 .post__date {
@@ -69,7 +70,7 @@
 
 .post__title {
   margin-bottom: $space-2;
-  font-size: $text-2xl;
+  font-size: $text-3xl;
   @include heading;
 }
 
