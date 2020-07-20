@@ -77,6 +77,10 @@
     border-bottom: 1px solid $black;
   }
 
+  .post__title {
+    font-size: $text-5;
+  }
+
   .post__meta {
     border: 0;
     display: block;

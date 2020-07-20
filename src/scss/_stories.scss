@@ -21,7 +21,7 @@
     margin-bottom: $space-4;
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     margin-bottom: $space-5;
   }
 
@@ -63,17 +63,26 @@
   }
 }
 
-.stories__grid--2x2 {
+.stories__grid--primary {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
-.stories__grid--3 {
+.stories__grid--secondary {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.stories__grid--tertiary {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
-.stories__grid--2 {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+.stories__grid--primary,
+.stories__grid--secondary {
+  .post__title {
+    @include breakpoint(md) {
+      font-size: $text-8;
+    }
+  }
 }
