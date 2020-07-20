@@ -1,4 +1,4 @@
-@mixin small-caps($text-size: $text-sm) {
+@mixin small-caps($text-size: $text-2) {
   text-transform: uppercase;
   font-weight: $font-semibold;
   font-size: $text-size;
@@ -26,7 +26,7 @@
 
 @mixin h2 {
   @include heading;
-  font-size: $text-3xl;
+  font-size: $text-7;
 }
 
 @mixin link {

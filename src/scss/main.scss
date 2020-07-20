@@ -33,13 +33,13 @@
 }
 
 .h2 {
-  font-size: $text-3xl;
+  font-size: $text-7;
 }
 .h3 {
-  font-size: $text-2xl;
+  font-size: $text-6;
 }
 .h4 {
-  font-size: $text-xl;
+  font-size: $text-5;
 }
 
 .meta {
@@ -51,5 +51,5 @@
 .meta__link {
   @include small-caps;
   @include link;
-  font-size: $text-xs;
+  font-size: $text-1;
 }

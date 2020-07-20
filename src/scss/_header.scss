@@ -89,7 +89,7 @@
     background: none;
     padding: $space-1 $space-2;
     border: 1px solid $white;
-    font-size: $text-md;
+    font-size: $text-3;
     appearance: none;
 
     &::placeholder {
@@ -99,7 +99,7 @@
 
   .btn {
     @include small-caps;
-    font-size: $text-sm;
+    font-size: $text-2;
     display: inline-block;
     color: $white;
     padding: $space-1 $space-2;
@@ -182,7 +182,7 @@
 
   .nav__link {
     font-weight: $font-normal;
-    font-size: $text-xs;
+    font-size: $text-1;
   }
 }
 

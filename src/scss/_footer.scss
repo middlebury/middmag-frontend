@@ -32,7 +32,7 @@
   @include small-caps;
   color: $white;
   display: block;
-  font-size: $text-xs;
+  font-size: $text-1;
   font-weight: $font-normal;
 
   @include hover-shift;
@@ -67,5 +67,5 @@
 }
 
 .footer__icon {
-  font-size: $text-lg;
+  font-size: $text-4;
 }

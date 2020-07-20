@@ -25,14 +25,14 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  font-size: $text-sm;
+  font-size: $text-2;
   border-bottom: 1px solid $black;
   padding-bottom: $space-1;
 }
 
 .post__date {
   @include small-caps;
-  font-size: $text-xs;
+  font-size: $text-1;
   font-weight: $font-normal;
 }
 
@@ -70,7 +70,7 @@
 
 .post__title {
   margin-bottom: $space-2;
-  font-size: $text-3xl;
+  font-size: $text-6;
   @include heading;
 }
 
@@ -79,11 +79,11 @@
 }
 
 .post__text {
-  font-size: $text-sm;
+  font-size: $text-2;
   margin-bottom: $space-4;
 
   @include breakpoint(md) {
-    font-size: $text-md;
+    font-size: $text-3;
   }
 }
 
@@ -123,7 +123,7 @@
 
   .post__title {
     @include breakpoint(md) {
-      font-size: $text-4xl;
+      font-size: $text-8;
     }
   }
 }
