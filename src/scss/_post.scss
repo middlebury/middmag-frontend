@@ -11,10 +11,6 @@
   display: flex;
 }
 
-.post__icon {
-  margin-left: auto;
-}
-
 .post__media {
   margin-bottom: $space-3;
   flex: 0 0 auto; // fixes ie11 where posts get tall
@@ -76,6 +72,13 @@
 
 .post__link {
   @include link;
+  display: flex;
+}
+
+.post__icon {
+  margin-left: auto;
+  padding-left: $space-2;
+  display: inline-block;
 }
 
 .post__text {
