@@ -1,6 +1,6 @@
-// grid
-
-$grid-columns: 12;
+@function rem($px) {
+  @return $px / 16 * 1rem;
+}
 
 $breakpoints: (
   xs: 0,
@@ -48,30 +48,33 @@ $gray-dark: #323232;
 // spacing
 
 $space-0: 0;
-$space-1: 4px;
-$space-2: 8px;
-$space-3: 16px;
-$space-4: 24px;
-$space-5: 32px;
-$space-6: 48px;
-$space-7: 64px;
-$space-8: 96px;
+$space-1: rem(4);
+$space-2: rem(8);
+$space-3: rem(16);
+$space-4: rem(24);
+$space-5: rem(32);
+$space-6: rem(48);
+$space-7: rem(64);
+$space-8: rem(96);
+$space-9: rem(128);
+$space-10: rem(160);
+$space-12: rem(196);
 
 // typography
 
 $font-sans: 'Verlag A', 'Verlag B', verdana, sans-serif;
 $font-serif: 'Hoefler Text A', 'Hoefler Text B', georgia, serif;
 
-$text-1: 12px;
-$text-2: 14px;
-$text-3: 16px;
-$text-4: 18px;
-$text-5: 20px;
-$text-6: 24px;
-$text-7: 28px;
-$text-8: 32px;
-$text-9: 48px;
-$text-10: 55px;
+$text-1: rem(12);
+$text-2: rem(14);
+$text-3: rem(16);
+$text-4: rem(18);
+$text-5: rem(20);
+$text-6: rem(24);
+$text-7: rem(28);
+$text-8: rem(32);
+$text-9: rem(48);
+$text-10: rem(55);
 
 $leading-none: 1;
 $leading-body: 1.7;
