@@ -1,0 +1,39 @@
+.pager {
+  border-top: 16px solid $black;
+  margin-top: $space-10;
+}
+
+.pager__items {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.pager__item {
+  margin-left: $space-1;
+  margin-right: $space-1;
+
+  a {
+    @include small-caps;
+    @include link;
+    display: inline-block;
+    border-bottom: 2px solid currentColor;
+  }
+
+  &.is-active {
+    a {
+      color: $black;
+      border: 0;
+    }
+  }
+}
+
+.pager__item--previous {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.pager__item--next {
+  margin-left: auto;
+  margin-right: 0;
+}

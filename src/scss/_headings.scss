@@ -1,0 +1,19 @@
+.h2,
+.h3,
+.h4 {
+  font-family: $font-serif;
+  line-height: $leading-heading;
+  font-weight: $font-normal;
+}
+
+.h2 {
+  font-size: $text-7;
+}
+
+.h3 {
+  font-size: $text-6;
+}
+
+.h4 {
+  font-size: $text-5;
+}

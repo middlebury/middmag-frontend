@@ -1,0 +1,24 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+  <h1 class="page__title">
+    taxonomy term
+  </h1>
+  <div class="page__body">
+    <div class="container">
+      <ul class="posts grid-gap">
+        {% for i in 0..8 %}
+          <li class="posts__item">
+            {% include 'includes/post-teaser.twig' with {
+              show_meta: true
+            } %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="container container--sm">
+      {% include 'includes/pager.twig' %}
+    </div>
+  </div>
+{% endblock %}

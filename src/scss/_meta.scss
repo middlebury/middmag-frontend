@@ -1,0 +1,18 @@
+.meta {
+  display: flex;
+  margin-bottom: $space-2;
+}
+
+.meta__item {
+  &:not(:last-child) {
+    border-right: 1px solid $black;
+    margin-right: $space-2;
+    padding-right: $space-2;
+  }
+}
+
+.meta__link {
+  @include small-caps;
+  @include link;
+  font-size: $text-1;
+}

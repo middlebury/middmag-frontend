@@ -20,40 +20,41 @@
 @import 'input-group';
 @import 'stories';
 @import 'quote';
+@import 'page';
+@import 'meta';
+@import 'headings';
+@import 'pager';
+@import 'rich-text';
 
 // utils
 @import 'screen-reader';
 
-.h2,
-.h3,
-.h4 {
-  font-family: $font-serif;
-  line-height: $leading-heading;
-  font-weight: $font-normal;
-}
-
-.h2 {
-  font-size: $text-7;
-}
-.h3 {
-  font-size: $text-6;
-}
-.h4 {
-  font-size: $text-5;
-}
-
-.meta {
-  display: flex;
-  margin-bottom: $space-2;
-}
-.meta__item {
-}
-.meta__link {
-  @include small-caps;
-  @include link;
-  font-size: $text-1;
-}
-
 .m-0 {
   margin: 0;
+}
+
+.posts {
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @extend .grid-gap;
+}
+
+.posts__item {
+  margin-bottom: $space-5;
+}
+
+.grid-gap {
+  margin-left: $grid-gutter-width / -2;
+  margin-right: $grid-gutter-width / -2;
+  margin-left: calc(var(--gutter-width) / -2);
+  margin-right: calc(var(--gutter-width) / -2);
+
+  > * {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+    padding-left: calc(var(--gutter-width) / 2);
+    padding-right: calc(var(--gutter-width) / 2);
+  }
 }

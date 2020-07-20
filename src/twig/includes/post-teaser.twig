@@ -1,4 +1,14 @@
 <article class="post">
+  {% if show_meta %}
+    <div class="post__meta">
+      <ul class="meta">
+        <li class="meta__item"><a href="" class="meta__link">Features</a></li>
+        <li class="meta__item">
+          <a href="" class="meta__link">Summer 2020</a>
+        </li>
+      </ul>
+    </div>
+  {% endif %}
   <figure class="post__media">
     <a href=""><img src="http://placehold.it/720x405" alt="" /></a>
   </figure>
@@ -21,7 +31,7 @@
       nisi.
     {% endif %}
   </p>
-  <div class="post__meta">
+  <div class="post__info">
     <div class="post__credits">
       <p>
         by Author name

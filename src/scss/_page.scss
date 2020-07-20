@@ -1,0 +1,17 @@
+.page {
+}
+
+.page__title {
+  @include small-caps;
+  font-size: $text-7;
+  line-height: $leading-none;
+  text-align: center;
+  border-top: 2px solid $black;
+  border-bottom: 2px solid $black;
+  margin-top: $space-9;
+  margin-bottom: $space-9;
+  padding: $space-1;
+}
+
+.page__body {
+}
