@@ -1,19 +1,22 @@
+{% set url = '/post.html' %}
 <article class="post">
   {% if show_meta %}
     <div class="post__meta">
       <ul class="meta">
-        <li class="meta__item"><a href="" class="meta__link">Features</a></li>
         <li class="meta__item">
-          <a href="" class="meta__link">Summer 2020</a>
+          <a href="/term-grid.html" class="meta__link">Features</a>
+        </li>
+        <li class="meta__item">
+          <a href="/term-list.html" class="meta__link">Summer 2020</a>
         </li>
       </ul>
     </div>
   {% endif %}
   <figure class="post__media">
-    <a href=""><img src="http://placehold.it/720x405" alt="" /></a>
+    <a href="{{ url }}"><img src="http://placehold.it/720x405" alt="" /></a>
   </figure>
   <h4 class="post__title">
-    <a href="" class="post__link">
+    <a href="{{ url }}" class="post__link">
       Lorem ipsum dolor sit amet{% if video %}
         <span class="post__icon">
           {% include 'includes/icon.twig' with {
