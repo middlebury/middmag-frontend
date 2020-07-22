@@ -75,6 +75,7 @@
 .post__title {
   margin-bottom: $space-2;
   font-size: $text-6;
+  color: $color-navy;
   @include heading;
 }
 
