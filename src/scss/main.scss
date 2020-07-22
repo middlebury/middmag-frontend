@@ -25,24 +25,13 @@
 @import 'headings';
 @import 'pager';
 @import 'rich-text';
+@import 'posts';
 
 // utils
 @import 'screen-reader';
 
 .m-0 {
   margin: 0;
-}
-
-.posts {
-  @include breakpoint(md) {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  @extend .grid-gap;
-}
-
-.posts__item {
-  margin-bottom: $space-5;
 }
 
 .grid-gap {

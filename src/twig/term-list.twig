@@ -1,0 +1,27 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+  <div class="page">
+    <h1 class="page__title">
+      taxonomy term
+    </h1>
+    <div class="page__body">
+      <div class="container container--sm">
+        <ul class="posts posts--list">
+          {% for i in 1..6 %}
+            <li class="posts__item">
+              {% include 'includes/post-teaser.twig' with {
+                show_meta: true
+              } %}
+              {# TODO: we need to decide if we're continuing to show post content on the term list view #}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="container container--sm">
+        {% include 'includes/pager.twig' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

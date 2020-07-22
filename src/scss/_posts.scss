@@ -1,0 +1,37 @@
+.posts {
+}
+
+.posts--grid {
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  @extend .grid-gap;
+}
+
+.posts--grid,
+.posts--list {
+  .posts__item {
+    @include breakpoint(md) {
+      margin-bottom: $space-8;
+    }
+
+    @include breakpoint(lg) {
+      margin-bottom: $space-10;
+    }
+  }
+}
+
+.posts--list {
+  .post__title {
+    @include breakpoint(lg) {
+      font-size: $text-10;
+    }
+  }
+}
+
+.posts__item {
+  margin-bottom: $space-6;
+}
