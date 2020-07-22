@@ -191,3 +191,60 @@ $post-box-alignments: (
     }
   }
 }
+
+.post__share {
+  margin-top: $space-5;
+  margin-bottom: $space-7;
+}
+
+.post__anchor {
+  // position: absolute;
+  // top: 90vh;
+  // left: 0;
+  visibility: hidden;
+}
+
+.page {
+  .post__media {
+    margin-bottom: $space-7;
+    margin-top: $space-9;
+  }
+
+  .post__media--full {
+    margin-top: 0;
+    margin-bottom: $space-9;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(lg) {
+      height: 100vh; // ie11 fallback
+      height: calc(100vh - var(--header-height));
+    }
+
+    img,
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+    }
+  }
+
+  .post__title {
+    font-size: $text-8;
+
+    @include breakpoint(md) {
+      font-size: $text-9;
+    }
+
+    @include breakpoint(lg) {
+      font-size: $text-10;
+    }
+  }
+
+  .post__text {
+    @include breakpoint(md) {
+      font-size: $text-4;
+    }
+  }
+}

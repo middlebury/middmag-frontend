@@ -1,0 +1,15 @@
+{% set width = width|default(768) %}
+{% set height = height|default(432) %}
+
+{# TODO: lazy image should check if screen is >md display before lazy loading image or swapping for mp4 video #}
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 {{
+  width
+  }} {{ height }}'/%3E"
+  data-src="{{ src }}"
+  data-video="{{ video }}"
+  class="lazyload"
+  alt="" />
+
+<noscript>
+  <img src="{{ src }}" alt="" />
+</noscript>

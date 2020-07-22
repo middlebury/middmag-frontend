@@ -1,0 +1,115 @@
+{% extends 'layout.twig' %}
+
+{% set title = 'Sheltering in Place with Robert Frost' %}
+{% set url = '#' %}
+
+{% set share_items = [
+  {
+    label: 'Facebook',
+    icon: 'facebook-circle',
+    href: 'https://www.facebook.com/sharer.php?u=' ~ url
+  },
+  {
+    label: 'Twitter',
+    icon: 'twitter-circle',
+    href: 'https://twitter.com/share?text=' ~ title ~ '&url=' ~ url
+  },
+  {
+    label: 'Email',
+    icon: 'email-circle',
+    href: 'mailto:?subject=' ~ title ~ '&body=' ~ url
+  }
+] %}
+
+{% block content %}
+  <article class="page">
+    {% if post_video %}
+      <div class="container container--md">
+        <figure class="post__media">
+          {% include 'includes/lazy-video.twig' with {
+            href: 'https://player.vimeo.com/video/420511968?dnt=1&app_id=122963',
+            src: 'http://middleburymagazine.com/files/2020/05/Screen-Shot-2020-05-26-at-11.55.52-AM-880x491.png'
+          } %}
+        </figure>
+      </div>
+    {% elseif post_mp4 %}
+      <figure class="post__media post__media--full">
+        {% include 'includes/lazy-img.twig' with {
+          src: 'http://middleburymagazine.com/files/2018/10/field.jpeg',
+          video: 'http://sandcat.middlebury.edu/comm/middmag-videos/wine.mp4'
+        } %}
+      </figure>
+    {% elseif post_feature %}
+      <figure class="post__media post__media--full">
+        <img src="http://placehold.it/1440x810" alt="" />
+      </figure>
+    {% else %}
+      <div class="container container--md">
+        <figure class="post__media">
+          <img src="http://placehold.it/768x432" alt="" />
+        </figure>
+      </div>
+    {% endif %}
+    <div class="container container--sm">
+      <header>
+        <div class="post__meta">
+          <ul class="meta">
+            <li class="meta__item">
+              <a href="/term-grid.html" class="meta__link">Features</a>
+            </li>
+            <li class="meta__item">
+              <a href="/term-list.html" class="meta__link">Summer 2020</a>
+            </li>
+          </ul>
+        </div>
+        <h1 class="post__title">
+          Sheltering in Place with Robert Frost
+        </h1>
+
+        <p class="post__text">
+          Deserunt cupidatat elit ea cupidatat quis eu veniam excepteur
+          incididunt deserunt cupidatat elit ea cupidatat quis eu veniam
+          excepteur incididunt nisi.
+        </p>
+        <div class="post__info">
+          <div class="post__credits">
+            <p>
+              by Author name
+            </p>
+            <p>
+              Illustration by Illustrator Name
+            </p>
+          </div>
+          <div class="post__date">
+            <time>February 25, 2020</time>
+          </div>
+        </div>
+        <div class="post__share">
+          <ul class="share">
+            {% for item in share_items %}
+              <li class="share__item">
+                <a href="{{ item.href }}">
+                  <span class="sr-only">Share via {{ item.label }}</span>
+                  {% include 'includes/icon.twig' with {
+                    name: item.icon
+                  } %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </header>
+    </div>
+
+    <a id="content" class="post__anchor"></a>
+
+    <div class="blocks">
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/image.twig' %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/image-text.twig' %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/slideshow.twig' %}
+    </div>
+  </article>
+{% endblock %}

@@ -26,6 +26,9 @@
 @import 'pager';
 @import 'rich-text';
 @import 'posts';
+@import 'blocks';
+@import 'video';
+@import 'lazyload';
 
 // utils
 @import 'screen-reader';
@@ -46,4 +49,14 @@
     padding-left: calc(var(--gutter-width) / 2);
     padding-right: calc(var(--gutter-width) / 2);
   }
+}
+
+.share {
+  display: flex;
+}
+
+.share__item {
+  margin-right: $space-3;
+  line-height: 1;
+  font-size: $text-8;
 }
