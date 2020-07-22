@@ -18,18 +18,23 @@
 
 .post__info {
   margin-top: auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   font-size: $text-2;
   border-bottom: 1px solid $black;
   padding-bottom: $space-1;
+  @include breakpoint(md) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 
 .post__date {
   @include small-caps;
   font-size: $text-1;
   font-weight: $font-normal;
+  @include breakpoint(md) {
+    text-align: right;
+  }
 }
 
 .post__overlay {
