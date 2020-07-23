@@ -11,23 +11,11 @@ $breakpoints: (
 );
 
 $grid-gutter-width: 32px;
+$grid-gutter-width-lg: 48px; // unused?
 
-$grid-gutter-widths: (
-  xs: 32px,
-  lg: 40px
-);
-
-$container-max-widths: (
-  lg: 1300px
-);
-
-$story-container-max-widths: (
-  xs: 640px
-);
-
-$story-container-max-widths-md: (
-  xs: 865px
-);
+$container-width: 1300px;
+$container-width-sm: 640px;
+$container-width-md: 864px;
 
 // colors
 
