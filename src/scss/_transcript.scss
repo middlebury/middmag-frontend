@@ -1,0 +1,40 @@
+.transcript {
+  margin-bottom: $space-5;
+  margin-top: $space-3;
+}
+
+.transcript__button {
+  @include small-caps;
+  border: 0;
+  background: 0;
+  text-align: left;
+  cursor: pointer;
+  padding: $space-2;
+  background: $color-ghost-white;
+  border: 1px solid transparent;
+
+  &:hover {
+    border-color: $color-sky;
+  }
+
+  &.is-active {
+    .transcript-icon {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.transcript__icon {
+  margin-left: $space-1;
+  transition: transform 0.2s;
+}
+
+.transcript__content {
+  display: none;
+  background: $color-ghost-white;
+  padding: $space-2;
+
+  &.is-open {
+    display: block;
+  }
+}

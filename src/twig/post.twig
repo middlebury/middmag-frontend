@@ -105,12 +105,40 @@
     <a id="content" class="post__anchor"></a>
 
     <div class="blocks">
+      {% include 'blocks/text-long.twig' %}
+      {% include 'blocks/video.twig' %}
+      {% include 'blocks/text.twig' %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/image.twig' %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/image.twig' with {
+        src: 'http://middleburymagazine.com/files/2017/07/6-objects-12.jpg',
+        right: true
+      } %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/image.twig' with {
+        src: 'http://middleburymagazine.com/files/2017/07/4-objects-7.jpg',
+        left: true
+      } %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/image.twig' with {
+        full: true
+      } %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/image-text.twig' %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/slideshow.twig' %}
+
+      {% embed 'layouts/side-story.twig'
+        with {
+          title: 'Side story'
+        }
+      %}
+        {% block content %}
+          {% include 'blocks/text.twig' %}
+          {% include 'blocks/image.twig' %}
+        {% endblock %}
+      {% endembed %}
     </div>
   </article>
 {% endblock %}

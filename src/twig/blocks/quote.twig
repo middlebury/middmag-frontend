@@ -1,0 +1,19 @@
+{% set classes = [
+  'block',
+  right ? 'block--right' : left ? 'block--left' : '',
+  'pulltext'
+] %}
+
+<figure class="{{ classes|join(' ') }}">
+  <blockquote>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim facere
+      aspernatur vero magnam sunt earum repellendus voluptatem aliquid nihil
+      architecto in nam asperiores, aperiam, reprehenderit fugiat. Placeat vero
+      sequi doloremque?
+    </p>
+  </blockquote>
+  <figcaption>
+    cite
+  </figcaption>
+</figure>

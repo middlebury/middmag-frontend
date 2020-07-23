@@ -1,5 +1,23 @@
-<div class="block block--image">
-  <figure>
-    <img src="//lorempixel.com/640x320" alt="" />
+{% set classes = [
+  'block',
+  'block--image',
+  right ? 'block--right' : left ? 'block--left' : '',
+  full ? 'block--full block--spaced' : ''
+] %}
+
+{% set src =
+  src|default(
+    'http://middleburymagazine.com/files/2017/07/1-objects-1-2-3-4.jpg'
+  )
+%}
+
+<div class="{{ classes|join(' ') }}">
+  <figure class="block__content">
+    {% include 'includes/lazy-img.twig' with {
+      src: src
+    } %}
+    <figcaption class="block__caption">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit
+    </figcaption>
   </figure>
 </div>

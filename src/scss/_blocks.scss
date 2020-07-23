@@ -1,8 +1,81 @@
 .blocks {
+  > .block:first-child {
+    margin-top: 0;
+  }
+
+  > .block:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .block {
+  @extend .container;
+  @extend .container--sm;
+
+  margin-bottom: $space-4;
+  margin-top: $space-4;
 }
 
-.block--text {
+// block vertical gaps
+
+.block--spaced {
+  margin-bottom: $space-6;
+  margin-top: $space-6;
+
+  @include breakpoint(md) {
+    margin-bottom: $space-9;
+    margin-top: $space-9;
+  }
+}
+
+// block alignments
+
+.block--right .block__content {
+  margin-bottom: $space-4;
+  margin-top: 0; // flush with top of text
+
+  @include breakpoint(md) {
+    float: right;
+    max-width: 400px;
+    margin-left: $space-4;
+  }
+
+  @include breakpoint(lg) {
+    margin-right: -220px;
+  }
+}
+
+.block--left .block__content {
+  margin-bottom: $space-4;
+  margin-top: 0; // flush with top of text
+
+  @include breakpoint(md) {
+    float: left;
+    max-width: 400px;
+    margin-left: $space-4;
+  }
+
+  @include breakpoint(lg) {
+    margin-right: -220px;
+  }
+}
+
+// block widths
+
+.block--full {
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.block--wide {
+  @extend .container--md;
+}
+
+// image / caption
+
+.block__image {
+}
+
+.block__caption {
 }

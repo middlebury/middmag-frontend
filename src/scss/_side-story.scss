@@ -1,0 +1,20 @@
+.side-story {
+  background: $color-ghost-white;
+  border-top: 1px solid $color-navy;
+  border-bottom: 1px solid $color-navy;
+  padding-top: $space-2;
+  padding-bottom: $space-7;
+
+  p {
+    color: $color-navy;
+    font-family: $font-sans;
+  }
+}
+
+.side-story__title {
+  @include small-caps;
+  color: $color-navy;
+  line-height: $leading-heading;
+  font-weight: $font-normal;
+  margin-bottom: $space-5;
+}
