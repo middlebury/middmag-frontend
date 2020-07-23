@@ -208,6 +208,7 @@ $post-box-alignments: (
   .post__media {
     margin-top: $space-7;
     margin-bottom: $space-5;
+
     @include breakpoint(md) {
       margin-top: $space-9;
       margin-bottom: $space-7;
@@ -216,8 +217,6 @@ $post-box-alignments: (
 
   .post__media--full {
     margin-top: 0;
-    position: relative;
-    overflow: hidden;
 
     @include breakpoint(md) {
       margin-bottom: $space-7;
@@ -225,16 +224,6 @@ $post-box-alignments: (
 
     @include breakpoint(lg) {
       margin-bottom: $space-9;
-      height: 100vh; // ie11 fallback
-      height: calc(100vh - var(--header-height));
-    }
-
-    img,
-    video {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      font-family: 'object-fit: cover;';
     }
   }
 
@@ -254,5 +243,20 @@ $post-box-alignments: (
     @include breakpoint(md) {
       font-size: $text-4;
     }
+  }
+}
+
+.post__media--full {
+  @include breakpoint(lg) {
+    height: 100vh; // ie11 fallback
+    height: calc(100vh - var(--header-height));
+  }
+
+  img,
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;'; // for object-fit-images js
   }
 }
