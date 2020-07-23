@@ -18,6 +18,7 @@ body {
   font-size: 1rem;
   line-height: $leading-body;
   background-color: $white;
+  padding-top: var(--header-height);
 }
 
 a {

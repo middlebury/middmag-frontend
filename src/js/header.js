@@ -5,7 +5,11 @@ const siteHeader = document.querySelector('.js-header');
 
 if (siteHeader) {
   const headerHeight = siteHeader.offsetHeight;
-  document.body.style.paddingTop = `${headerHeight}px`;
+
+  document
+    .querySelector(':root')
+    .style.setProperty('--header-height', headerHeight + 'px');
+
   const headroom = new Headroom(siteHeader, {
     offset: headerHeight
   });
