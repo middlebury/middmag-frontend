@@ -32,16 +32,4 @@ jumplink.addEventListener('click', e => {
   });
 });
 
-// transcript togglers
-const transcripts = document.querySelectorAll('.js-transcript');
-[].forEach.call(transcripts, el => {
-  const btn = el.querySelector('.transcript-button');
-  const content = el.querySelector('.transcript-content');
-
-  btn.addEventListener('click', e => {
-    btn.classList.toggle('is-active');
-    content.classList.toggle('is-open');
-  });
-});
-
 objectFitImages();

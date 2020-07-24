@@ -3,7 +3,7 @@
   margin-top: $space-3;
 }
 
-.transcript__button {
+.transcript__btn {
   @include small-caps;
   border: 0;
   background: 0;
@@ -17,7 +17,7 @@
     border-color: $color-sky;
   }
 
-  &.is-active {
+  &.is-toggled {
     .transcript-icon {
       transform: rotate(-180deg);
     }
@@ -30,11 +30,14 @@
 }
 
 .transcript__content {
-  display: none;
   background: $color-ghost-white;
   padding: $space-2;
 
-  &.is-open {
+  .js & {
+    display: none;
+  }
+
+  &.is-toggled {
     display: block;
   }
 }
