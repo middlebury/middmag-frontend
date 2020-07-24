@@ -30,10 +30,13 @@
 
 // block alignments
 
-.block--right .block__content {
-  margin-bottom: $space-4;
+.block--right,
+.block--left {
   margin-top: 0; // flush with top of text
+  margin-bottom: $space-4;
+}
 
+.block--right .block__content {
   @include breakpoint(md) {
     float: right;
     max-width: 400px;
@@ -46,9 +49,6 @@
 }
 
 .block--left .block__content {
-  margin-bottom: $space-4;
-  margin-top: 0; // flush with top of text
-
   @include breakpoint(md) {
     float: left;
     max-width: 400px;

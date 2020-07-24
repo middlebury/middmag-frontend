@@ -127,6 +127,18 @@
       {% include 'blocks/text.twig' %}
       {% include 'blocks/image-text.twig' %}
       {% include 'blocks/text.twig' %}
+      {% include 'blocks/pullquote.twig' with {
+        marks: true
+      } %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/pullquote.twig' with {
+        right: true
+      } %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/pullquote.twig' with {
+        left: true
+      } %}
+      {% include 'blocks/text.twig' %}
       {% include 'blocks/slideshow.twig' %}
 
       {% embed 'layouts/side-story.twig'

@@ -1,0 +1,25 @@
+.pullquote {
+  padding-top: $space-3;
+  padding-bottom: $space-3;
+  border-top: 1px solid $color-navy;
+  border-bottom: 1px solid $color-navy;
+  color: $color-keppel;
+  font-family: $font-sans;
+  font-size: $text-6;
+  font-weight: $font-light;
+}
+
+.pullquote--marks {
+  position: relative;
+  padding-left: $space-3;
+
+  &:before {
+    content: '“';
+    font-weight: $font-light;
+    font-size: $text-7;
+    font-family: $font-serif;
+    position: absolute;
+    top: $space-2;
+    left: 0;
+  }
+}
