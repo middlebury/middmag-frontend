@@ -7,6 +7,17 @@
     margin-top: 0;
   }
 
+  a {
+    color: $color-sky;
+    transition: background 0.2s;
+    border-bottom: 1px solid $color-sky;
+
+    &:hover {
+      background: $black;
+      color: $white;
+    }
+  }
+
   p {
     font-family: $font-serif;
     font-size: $text-4;
