@@ -1,11 +1,15 @@
 {% set id = random(123) %}
 <div class="transcript">
-  <button class="transcript__btn" data-toggle-target=".js-transcript-{{ id }}">
-    Transcript{% include 'includes/icon.twig' with {
-      name: 'chevron-down',
-      class: 'transcript__icon'
-    } %}
-  </button>
+  <h3 class="transcript__title">
+    <button class="transcript__btn"
+      data-toggle-target=".js-transcript-{{ id }}"
+      aria-expanded="false">
+      Transcript{% include 'includes/icon.twig' with {
+        name: 'chevron-down',
+        class: 'transcript__icon'
+      } %}
+    </button>
+  </h3>
   <div class="transcript__content rich-text js-transcript-{{ id }}">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, ex

@@ -3,6 +3,12 @@
   margin-top: $space-3;
 }
 
+// override rich-text heading styles
+.transcript__title {
+  margin: 0 !important;
+  font-family: $font-sans !important;
+}
+
 .transcript__btn {
   @include small-caps;
   border: 0;
