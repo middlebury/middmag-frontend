@@ -52,11 +52,11 @@
   @include breakpoint(md) {
     float: left;
     max-width: 400px;
-    margin-left: $space-4;
+    margin-right: $space-4;
   }
 
   @include breakpoint(lg) {
-    margin-right: -220px;
+    margin-left: -220px;
   }
 }
 
