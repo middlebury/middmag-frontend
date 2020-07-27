@@ -1,0 +1,17 @@
+.media {
+  @include breakpoint(md) {
+    display: flex;
+  }
+
+  img {
+    margin-bottom: $space-5;
+
+    @include breakpoint(md) {
+      margin-right: $space-5;
+      margin-bottom: 0;
+    }
+  }
+}
+.media__body {
+  flex: 1;
+}
