@@ -1,8 +1,10 @@
 {% set classes = [
   'block',
+  'block--spaced',
   'block--image',
-  right ? 'block--right' : left ? 'block--left' : '',
-  full ? 'block--full block--spaced' : ''
+  right ? 'block--right' : left ? 'block--left' : 'block--center ',
+  not right and not left ? 'block--wide' : '',
+  full ? 'block--full' : ''
 ] %}
 
 {% set src =
@@ -12,12 +14,14 @@
 %}
 
 <div class="{{ classes|join(' ') }}">
-  <figure class="block__content">
-    {% include 'includes/lazy-img.twig' with {
-      src: src
-    } %}
-    <figcaption class="block__caption">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit
-    </figcaption>
-  </figure>
+  <div class="block__content">
+    <figure class="block__media">
+      {% include 'includes/lazy-img.twig' with {
+        src: src
+      } %}
+      <figcaption class="block__caption">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit
+      </figcaption>
+    </figure>
+  </div>
 </div>
