@@ -15,6 +15,7 @@
 }
 
 .video__link {
+  &:focus,
   &:hover {
     .video__icon {
       transform: translate(-50%, 50%) scale(1.05);
