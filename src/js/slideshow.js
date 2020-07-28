@@ -1,17 +1,17 @@
 import Swiper from 'swiper';
 
 function makeSlideshow(elem) {
-  var showMultiple = elem.classList.contains('slideshow--many');
+  const showMultiple = elem.classList.contains('slideshow--many');
 
-  var config = {
+  let config = {
     speed: 800,
     navigation: {
-      nextEl: elem.querySelector('.slideshow-button-next'),
-      prevEl: elem.querySelector('.slideshow-button-prev')
+      nextEl: elem.querySelector('.slideshow__btn--next'),
+      prevEl: elem.querySelector('.slideshow__btn--prev')
     },
-    slideNextClass: 'slideshow-item-next',
-    slidePrevClass: 'slideshow-item-prev',
-    slideActiveClass: 'slideshow-item-active',
+    slideNextClass: 'slideshow__item--next',
+    slidePrevClass: 'slideshow__item--prev',
+    slideActiveClass: 'slideshow__item--active',
     grabCursor: true,
     slidesPerView: 1.2,
     centeredSlides: true
@@ -40,16 +40,16 @@ function makeSlideshow(elem) {
     });
   }
 
-  var slideshow = new Swiper(elem, config);
+  const slideshow = new Swiper(elem, config);
 
-  const imgs = elem.querySelectorAll('.slideshow-list img');
+  const imgs = elem.querySelectorAll('.slideshow__list img');
 
-  [].forEach.call(imgs, (img) => {
-    img.addEventListener('click', function () {
-      if (img.parentNode.classList.contains('slideshow-item-next')) {
+  [].forEach.call(imgs, img => {
+    img.addEventListener('click', function() {
+      if (img.parentNode.classList.contains('slideshow__item--next')) {
         slideshow.slideNext();
       }
-      if (img.parentNode.classList.contains('slideshow-item-prev')) {
+      if (img.parentNode.classList.contains('slideshow__item--prev')) {
         slideshow.slidePrev();
       }
     });

@@ -34,6 +34,11 @@
 .block--left {
   margin-top: 0; // flush with top of text
   margin-bottom: $space-4;
+
+  .block__caption {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .block--right .block__content {
@@ -79,13 +84,14 @@
 }
 
 .block__caption {
+  padding-top: $space-2;
+  color: $color-navy;
 }
 
 .block--image {
   .block__caption {
     display: table-caption;
     caption-side: bottom;
-    padding-top: $space-2;
     text-align: left;
   }
 }
@@ -106,7 +112,5 @@
 
   .block__caption {
     @extend .container;
-    padding-left: 0;
-    padding-right: 0;
   }
 }

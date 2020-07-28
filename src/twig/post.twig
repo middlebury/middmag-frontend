@@ -146,6 +146,11 @@
       } %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/slideshow.twig' %}
+      {% include 'blocks/text.twig' %}
+      {% include 'blocks/slideshow.twig' with {
+        multiple: true
+      } %}
+      {% include 'blocks/text.twig' %}
 
       {% embed 'layouts/side-story.twig'
         with {
