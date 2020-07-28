@@ -8,12 +8,12 @@
   }
 
   a {
-    color: $color-sky;
-    transition: background 0.2s;
-    border-bottom: 1px solid $color-sky;
+    color: $black;
+    border-bottom: 2px solid $color-sky;
+    transition: 0.2s;
 
     &:hover {
-      background: $black;
+      background-color: $black;
       color: $white;
     }
   }
@@ -24,14 +24,96 @@
     margin-bottom: $space-4;
   }
 
+  h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: $font-serif;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
     line-height: $leading-heading;
+  }
+
+  h2 {
+    color: $color-navy;
+    font-size: $text-8;
+    margin-top: $space-9;
+    margin-bottom: $space-5;
+    font-weight: $font-normal;
+  }
+
+  h3 {
+    @include small-caps;
+    color: $color-navy;
+    font-size: $text-3;
+    margin-top: $space-5;
+    margin-bottom: $space-2;
+  }
+
+  h4 {
+    font-family: $font-serif;
+    font-size: $text-4;
+    margin-top: $space-4;
+  }
+
+  h5 {
+    @include small-caps;
+    font-size: $text-1;
+    font-weight: $font-bold;
+    margin-bottom: $space-3;
+  }
+
+  h6 {
+    @include small-caps;
+    font-size: $text-1;
+    font-weight: $font-bold;
+    margin-bottom: $space-3;
+    padding-top: $space-2;
+    border-top: 1px solid $black;
+  }
+
+  ol,
+  ul {
+    li {
+      margin-top: $space-2;
+    }
+  }
+
+  ul {
+    li {
+      padding-left: $space-4;
+
+      &:before {
+        content: '•';
+        font-size: $text-1;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: order;
+
+    li {
+      padding-left: $space-4;
+
+      &:before {
+        content: counter(order) '.';
+        counter-increment: order;
+        font-size: $text-3;
+        position: absolute;
+        left: 0;
+        font-family: $font-sans;
+        font-weight: $font-medium;
+      }
+    }
+  }
+
+  li {
+    font-family: $font-serif;
+    font-size: 17px;
+    position: relative;
+    // padding-left: 10px;
+    margin-bottom: 14px;
   }
 }
