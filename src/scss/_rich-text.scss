@@ -75,16 +75,19 @@
   ul {
     margin-top: $space-4;
     margin-bottom: $space-4;
+  }
 
-    li {
-      margin-top: $space-2;
-    }
+  li {
+    font-family: $font-serif;
+    font-size: $text-4;
+    position: relative;
+    margin-bottom: $space-2;
+    margin-top: $space-2;
+    padding-left: $space-4;
   }
 
   ul {
     li {
-      padding-left: $space-4;
-
       &:before {
         content: '•';
         font-size: $text-1;
@@ -98,8 +101,6 @@
     counter-reset: order;
 
     li {
-      padding-left: $space-4;
-
       &:before {
         content: counter(order) '.';
         counter-increment: order;
@@ -110,13 +111,5 @@
         font-weight: $font-medium;
       }
     }
-  }
-
-  li {
-    font-family: $font-serif;
-    font-size: 17px;
-    position: relative;
-    // padding-left: 10px;
-    margin-bottom: 14px;
   }
 }
