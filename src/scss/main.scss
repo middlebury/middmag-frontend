@@ -35,6 +35,7 @@
 @import 'transcript';
 @import 'pullquote';
 @import 'media';
+@import 'shortcodes';
 
 // utils
 
@@ -64,20 +65,4 @@
   margin-right: $space-3;
   line-height: 1;
   font-size: $text-8;
-}
-
-.dropcap {
-  font-size: 100px;
-  line-height: 90px;
-  color: $color-navy;
-  float: left;
-  margin-right: $space-3;
-}
-
-.intro {
-  @include small-caps;
-  font-size: $text-3;
-  color: $color-navy;
-  font-weight: $font-bold;
-  font-family: $font-sans;
 }

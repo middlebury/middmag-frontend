@@ -1,0 +1,15 @@
+.dropcap {
+  font-size: 100px;
+  line-height: 90px;
+  color: $color-navy;
+  float: left;
+  margin-right: $space-3;
+}
+
+.intro {
+  @include small-caps;
+  font-size: $text-3;
+  color: $color-navy;
+  font-weight: $font-bold;
+  font-family: $font-sans;
+}
