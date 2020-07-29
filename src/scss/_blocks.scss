@@ -32,8 +32,13 @@
 
 .block--right,
 .block--left {
-  margin-top: 0; // flush with top of text
-  margin-bottom: $space-4;
+  // flush with other blocks
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .block__content {
+    margin-bottom: $space-4;
+  }
 
   .block__caption {
     padding-left: 0;
