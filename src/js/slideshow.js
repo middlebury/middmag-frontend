@@ -1,9 +1,10 @@
-import Swiper from 'swiper';
+import Swiper from './swiper';
 
 function makeSlideshow(elem) {
   const showMultiple = elem.classList.contains('slideshow--many');
 
   let config = {
+    a11y: true,
     speed: 800,
     navigation: {
       nextEl: elem.querySelector('.slideshow__btn--next'),

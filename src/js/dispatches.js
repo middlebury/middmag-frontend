@@ -1,9 +1,10 @@
-import Swiper from 'swiper';
+import Swiper from './swiper';
 
 function initDispatchCarousel(elem) {
   if (!elem) return;
 
   const dispatchesSwiper = new Swiper(elem, {
+    a11y: true,
     speed: 800,
     navigation: {
       nextEl: elem.querySelector('.js-next'),
