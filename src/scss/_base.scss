@@ -1,7 +1,7 @@
 :root {
   --header-height: #{$header-height};
   --gutter-width: #{$space-5};
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     --gutter-width: #{$space-6};
   }
 }
