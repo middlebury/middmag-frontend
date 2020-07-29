@@ -41,13 +41,16 @@
       </figure>
     {% elseif post_feature %}
       <figure class="post__media post__media--full">
-        <img src="http://middleburymagazine.com/files/2020/07/feature_FrostShelter_opener-1920x1080.jpg"
-          alt="" />
+        {% include 'includes/lazy-img.twig' with {
+          src: 'http://middleburymagazine.com/files/2020/07/feature_FrostShelter_opener-1920x1080.jpg'
+        } %}
       </figure>
     {% else %}
       <div class="container container--md">
         <figure class="post__media post__media--hero">
-          <img src="http://placehold.it/864x486" alt="" />
+          {% include 'includes/lazy-img.twig' with {
+            src: 'http://placehold.it/864x486'
+          } %}
         </figure>
       </div>
     {% endif %}
