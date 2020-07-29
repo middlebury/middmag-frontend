@@ -1,8 +1,8 @@
 :root {
   --header-height: #{$header-height};
-  --gutter-width: 32px;
+  --gutter-width: #{$space-5};
   @include breakpoint(md) {
-    --gutter-width: 40px;
+    --gutter-width: #{$space-6};
   }
 }
 
