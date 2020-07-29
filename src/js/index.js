@@ -7,7 +7,7 @@ import './object-assign';
 import './toggler';
 import './header';
 import './slideshow';
-import './comments';
+// import './comments';
 import './video';
 import './video-swapper';
 import './dispatches';
