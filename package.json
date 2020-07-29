@@ -5,7 +5,8 @@
     "start": "npm run dev",
     "dev": "gulp dev",
     "build": "gulp build",
-    "build:icons": "svg-sprite --symbol --svg-xmldecl=false --symbol-dest='' --symbol-sprite=icons.twig --dest=src/twig/includes  src/icons/*.svg"
+    "build:icons": "svg-sprite --symbol --svg-xmldecl=false --symbol-dest='' --symbol-sprite=icons.twig --dest=src/twig/includes  src/icons/*.svg",
+    "format:build": "prettier dist/**/*.html"
   },
   "dependencies": {
     "headroom.js": "^0.9.4",
