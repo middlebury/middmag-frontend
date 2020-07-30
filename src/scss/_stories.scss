@@ -11,7 +11,8 @@
 
 .stories__section {
   margin-bottom: $space-8;
-  max-height: 100%; // makes sections in grid line up to bottoms
+  display: flex;
+  flex-direction: column;
 }
 
 .stories__title {
