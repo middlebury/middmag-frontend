@@ -2,9 +2,7 @@
   <div class="footer__main">
     <a href="http://www.middlebury.edu" class="footer__logo">
       <span class="sr-only">Middlebury</span>
-      <svg focusable="false" aria-hidden="true" width="42" height="47">
-        <use xlink:href="#midd-shield" />
-      </svg>
+      <span aria-hidden="true">{% include '../../img/midd-shield.svg' %}</span>
     </a>
     <ul class="footer__nav">
       {% for item in footer_menu %}
