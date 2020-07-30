@@ -8,37 +8,40 @@
 @import '../../node_modules/swiper/swiper';
 @import 'base';
 
+// import earlier for mixins
 @import 'screen-reader';
 
 // objects
+@import 'icon';
 @import 'layout';
 @import 'grid';
+@import 'input-group';
 
 // components
-@import 'icon';
-@import 'header';
-@import 'footer';
-@import 'post';
-@import 'dispatches';
-@import 'input-group';
-@import 'stories';
-@import 'quote';
-@import 'page';
-@import 'meta';
-@import 'headings';
-@import 'pager';
-@import 'rich-text';
-@import 'posts';
 @import 'blocks';
-@import 'video';
+@import 'dispatches';
+@import 'footer';
+@import 'header';
+@import 'headings';
 @import 'lazyload';
-@import 'side-story';
-@import 'transcript';
-@import 'pullquote';
 @import 'media';
-@import 'slideshow';
+@import 'meta';
+@import 'page';
+@import 'pager';
+@import 'post';
+@import 'posts';
+@import 'pullquote';
+@import 'quote';
 @import 'share';
 @import 'shortcodes';
+@import 'side-story';
+@import 'slideshow';
+@import 'stories';
+@import 'transcript';
+@import 'video';
+
+// scope
+@import 'rich-text';
 
 // utils
 
