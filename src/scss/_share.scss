@@ -1,0 +1,9 @@
+.share {
+  display: flex;
+}
+
+.share__item {
+  margin-right: $space-3;
+  line-height: 1;
+  font-size: $text-8;
+}

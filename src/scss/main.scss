@@ -12,6 +12,7 @@
 
 // objects
 @import 'layout';
+@import 'grid';
 
 // components
 @import 'icon';
@@ -36,34 +37,11 @@
 @import 'pullquote';
 @import 'media';
 @import 'slideshow';
+@import 'share';
 @import 'shortcodes';
 
 // utils
 
 .m-0 {
   margin: 0;
-}
-
-.grid-gap {
-  margin-left: $grid-gutter-width / -2;
-  margin-right: $grid-gutter-width / -2;
-  margin-left: calc(var(--gutter-width) / -2);
-  margin-right: calc(var(--gutter-width) / -2);
-
-  > * {
-    padding-left: $grid-gutter-width / 2;
-    padding-right: $grid-gutter-width / 2;
-    padding-left: calc(var(--gutter-width) / 2);
-    padding-right: calc(var(--gutter-width) / 2);
-  }
-}
-
-.share {
-  display: flex;
-}
-
-.share__item {
-  margin-right: $space-3;
-  line-height: 1;
-  font-size: $text-8;
 }
