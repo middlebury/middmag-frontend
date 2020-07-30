@@ -123,10 +123,11 @@
 }
 
 .header__btn-text {
-  display: none;
   margin-left: $space-2;
+  @include sr-only;
 
   @include breakpoint(sm) {
+    @include not-sr-only;
     display: inline;
   }
 }
