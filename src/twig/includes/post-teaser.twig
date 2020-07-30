@@ -1,16 +1,7 @@
 {% set url = '/post.html' %}
 <article class="post">
   {% if show_meta %}
-    <div class="post__meta">
-      <ul class="meta">
-        <li class="meta__item">
-          <a href="/term-grid.html" class="meta__link">Features</a>
-        </li>
-        <li class="meta__item">
-          <a href="/term-list.html" class="meta__link">Summer 2020</a>
-        </li>
-      </ul>
-    </div>
+    {% include 'includes/post-meta.twig' %}
   {% endif %}
   <figure class="post__media">
     <a href="{{ url }}"><img src="http://placehold.it/720x405" alt="" /></a>

@@ -1,13 +1,25 @@
 .meta {
   display: flex;
-  margin-bottom: $space-2;
 }
 
-.meta__item {
+.meta__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $space-2;
+
   &:not(:last-child) {
     border-right: 1px solid $black;
     margin-right: $space-2;
     padding-right: $space-2;
+  }
+}
+
+.meta__item {
+  &:not(:last-child) {
+    margin-right: $space-1;
+    &:after {
+      content: ',';
+    }
   }
 }
 
