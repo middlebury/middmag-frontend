@@ -222,6 +222,7 @@ $post-box-alignments: (
     height: 100vh; // ie11 fallback
     height: calc(100vh - var(--header-height));
     margin-bottom: $space-9;
+    min-height: 30rem;
   }
 
   img,
