@@ -219,14 +219,9 @@ $post-box-alignments: (
   }
 
   @include breakpoint(lg) {
-    margin-bottom: $space-9;
-  }
-}
-
-.post__media--full {
-  @include breakpoint(lg) {
     height: 100vh; // ie11 fallback
     height: calc(100vh - var(--header-height));
+    margin-bottom: $space-9;
   }
 
   img,
