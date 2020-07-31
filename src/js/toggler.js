@@ -10,8 +10,8 @@ class Toggler {
     this.activeClass = 'is-toggled';
     this.bodyActiveClass = 'has-toggled-elem';
 
-    this.handleElemClick = this.handleElemClick.bind(this)
-    this.handleOutsideClick = this.handleOutsideClick.bind(this)
+    this.focusTargetSelector = elem.getAttribute('data-toggle-focus');
+    this.focusTarget = document.querySelector(this.focusTargetSelector);
   }
 
   init() {
@@ -31,12 +31,12 @@ class Toggler {
     this.elem.addEventListener('click', this.handleElemClick);
   }
 
-  handleElemClick(e) {
+  handleElemClick = e => {
     e.preventDefault();
     this.toggle(this.elem, this.target);
   }
 
-  handleOutsideClick(e) {
+  handleOutsideClick = e => {
     const isClickInside = this.outsideElem.contains(e.target);
 
     // if the click outside is on another toggler that is same group, it's not a click outside
@@ -80,6 +80,13 @@ class Toggler {
     elem.classList.add(this.activeClass);
     target.classList.add(this.activeClass);
     document.body.classList.add(this.bodyActiveClass);
+
+    if (this.focusTarget) {
+      // TODO: watch for transition end instead
+      setTimeout(() => {
+        document.querySelector('input').focus();
+      }, 100);
+    }
   }
 
   toggle(elem, target) {
