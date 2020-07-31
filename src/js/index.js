@@ -3,7 +3,6 @@ import 'lazysizes';
 import objectFitImages from 'object-fit-images';
 
 import './object-assign';
-
 import './toggler';
 import './header';
 import './slideshow';
@@ -25,11 +24,7 @@ if (isTouchDevice) {
 const jumplink = document.querySelector('.js-recent');
 
 jumplink.addEventListener('click', e => {
-  const togglers = document.querySelectorAll('.is-toggled');
-
-  [].forEach.call(togglers, toggler => {
-    toggler.classList.remove('is-toggled');
-  });
+  document.querySelector('.header__btn').click();
 });
 
 objectFitImages();
