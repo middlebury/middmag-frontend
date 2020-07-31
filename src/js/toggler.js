@@ -3,7 +3,9 @@ class Toggler {
     this.elem = elem;
     this.target = this.getTarget(this.elem);
 
-    const outsideElemSelector = this.elem.getAttribute('data-toggle-onoutsideclickof');
+    const outsideElemSelector = this.elem.getAttribute(
+      'data-toggle-onoutsideclickof'
+    );
     this.outsideElem = document.querySelector(outsideElemSelector);
 
     this.enabledClass = 'has-toggler';
@@ -15,7 +17,7 @@ class Toggler {
   }
 
   init() {
-    if(!this.target) {
+    if (!this.target) {
       return;
     }
     this.elem.classList.add(this.enabledClass);
@@ -24,7 +26,7 @@ class Toggler {
   }
 
   addListeners() {
-    if(this.outsideElem) {
+    if (this.outsideElem) {
       document.addEventListener('click', this.handleOutsideClick);
     }
 
@@ -34,16 +36,16 @@ class Toggler {
   handleElemClick = e => {
     e.preventDefault();
     this.toggle(this.elem, this.target);
-  }
+  };
 
   handleOutsideClick = e => {
     const isClickInside = this.outsideElem.contains(e.target);
 
     // if the click outside is on another toggler that is same group, it's not a click outside
-    if(!isClickInside && this.isActive(this.elem)) {
+    if (!isClickInside && this.isActive(this.elem)) {
       this.close(this.elem, this.target);
     }
-  }
+  };
 
   getTarget(elem) {
     const selector = elem.getAttribute('data-toggle-target');
@@ -57,13 +59,15 @@ class Toggler {
 
   closeGroup(elem) {
     const group = elem.getAttribute('data-toggle-group');
-    const groupElems = document.querySelectorAll('[data-toggle-group="' + group + '"]');
+    const groupElems = document.querySelectorAll(
+      '[data-toggle-group="' + group + '"]'
+    );
 
-    if(groupElems) {
+    if (groupElems) {
       [].forEach.call(groupElems, elem => {
         const target = this.getTarget(elem);
 
-        if(this.isActive(elem)) {
+        if (this.isActive(elem)) {
           this.close(elem, target);
         }
       });
@@ -90,7 +94,7 @@ class Toggler {
   }
 
   toggle(elem, target) {
-    if(this.isActive(elem)) {
+    if (this.isActive(elem)) {
       this.close(elem, target);
       return;
     }
