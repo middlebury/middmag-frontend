@@ -4,7 +4,11 @@
     {% include 'includes/post-meta.twig' %}
   {% endif %}
   <figure class="post__media">
-    <a href="{{ url }}">{% include 'includes/lazy-img.twig' %}</a>
+    <a href="{{ url }}">
+      {% include 'includes/lazy-img.twig' with {
+        src: 'http://placehold.it/720x405'
+      } %}
+    </a>
   </figure>
   <h4 class="post__title">
     <a href="{{ url }}" class="post__link">
