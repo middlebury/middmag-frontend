@@ -112,7 +112,7 @@
 // modifiers
 
 .post--sticky {
-  margin-bottom: 12rem;
+  margin-bottom: $space-9;
 
   @include breakpoint(md) {
     height: 100vh;
