@@ -35,6 +35,7 @@
     {% elseif post_mp4 %}
       <figure class="post__media post__media--full">
         {% include 'includes/lazy-img.twig' with {
+          name: 'featured',
           src: 'http://middleburymagazine.com/files/2018/10/field.jpeg',
           video: 'http://sandcat.middlebury.edu/comm/middmag-videos/wine.mp4'
         } %}
@@ -42,6 +43,7 @@
     {% elseif post_feature %}
       <figure class="post__media post__media--full">
         {% include 'includes/lazy-img.twig' with {
+          name: 'featured',
           src: 'http://middleburymagazine.com/files/2020/07/feature_FrostShelter_opener-1920x1080.jpg'
         } %}
       </figure>

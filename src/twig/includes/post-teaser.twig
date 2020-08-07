@@ -6,7 +6,7 @@
   <figure class="post__media">
     <a href="{{ url }}">
       {% include 'includes/lazy-img.twig' with {
-        src: 'http://placehold.it/720x405'
+        name: image_name|default('post')
       } %}
     </a>
   </figure>

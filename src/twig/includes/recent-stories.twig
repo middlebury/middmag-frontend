@@ -13,7 +13,11 @@
 
       <ul class="stories__grid stories__grid--primary posts">
         {% for item in 0..3 %}
-          <li class="posts__item">{% include 'includes/post-teaser.twig' %}</li>
+          <li class="posts__item">
+            {% include 'includes/post-teaser.twig' with {
+              image_name: 'post_lg'
+            } %}
+          </li>
         {% endfor %}
       </ul>
     </div>
@@ -46,21 +50,27 @@
         <h3 class="stories__title">
           <a href="">Editor's Note</a>
         </h3>
-        {% include 'includes/post-teaser.twig' %}
+        {% include 'includes/post-teaser.twig' with {
+          image_name: 'post_sm'
+        } %}
       </div>
 
       <div class="stories__section">
         <h3 class="stories__title">
           <a href="">Old Chapel</a>
         </h3>
-        {% include 'includes/post-teaser.twig' %}
+        {% include 'includes/post-teaser.twig' with {
+          image_name: 'post_sm'
+        } %}
       </div>
 
       <div class="stories__section">
         <h3 class="stories__title">
           <a href="">Road Taken</a>
         </h3>
-        {% include 'includes/post-teaser.twig' %}
+        {% include 'includes/post-teaser.twig' with {
+          image_name: 'post_sm'
+        } %}
       </div>
     </div>
 
@@ -79,7 +89,9 @@
           <ul class="posts">
             {% for item in 0..3 %}
               <li class="posts__item">
-                {% include 'includes/post-teaser.twig' %}
+                {% include 'includes/post-teaser.twig' with {
+                  image_name: 'post_sm'
+                } %}
               </li>
             {% endfor %}
           </ul>
@@ -95,7 +107,9 @@
 
           <ul class="posts">
             <li class="posts__item">
-              {% include 'includes/post-teaser.twig' %}
+              {% include 'includes/post-teaser.twig' with {
+                image_name: 'post_sm'
+              } %}
             </li>
           </ul>
         </div>
@@ -108,7 +122,9 @@
           <ul class="posts">
             {% for item in 0..2 %}
               <li class="posts__item">
-                {% include 'includes/post-teaser.twig' %}
+                {% include 'includes/post-teaser.twig' with {
+                  image_name: 'post_sm'
+                } %}
               </li>
             {% endfor %}
           </ul>
@@ -125,7 +141,8 @@
             {% for item in 0..3 %}
               <li class="posts__item">
                 {% include 'includes/post-teaser.twig' with {
-                  video_icon: true
+                  video_icon: true,
+                  image_name: 'post_sm'
                 } %}
               </li>
             {% endfor %}

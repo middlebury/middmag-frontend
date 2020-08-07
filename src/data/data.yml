@@ -49,3 +49,35 @@ social_menu:
   - text: Middlebury Magazine on Twitter
     icon: twitter
     url: https://twitter.com/middleburymag
+
+image_styles:
+  # posts in dispatches
+  post_sm:
+    srcset:
+      - 288x162
+      - 416x234
+    sizes: '(max-width: 500px) 416px, 288px'
+  # default post in term grid and recent stories
+  post:
+    srcset:
+      - 416x234
+      - 640x360
+  # feature posts in recent stories
+  post_lg:
+    srcset:
+      - 416x234
+      - 640x360
+      - 768x432
+    # sizes: '(min-width: 700px) 100w, 640px'
+  # Full width sticky and feature post image.
+  # Also full width images in post content
+  post_xl:
+    srcset:
+      - 416x234
+      - 640x360
+      - 768x432
+      - 1024x576
+      - 1280x720
+      - 1600x900
+      - 1920x1080
+      - 2560x1440

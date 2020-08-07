@@ -2,6 +2,12 @@ function createVideoFromImg(img) {
   const video = document.createElement('video');
   const source = document.createElement('source');
 
+  const videoSrc = img.getAttribute('data-video');
+
+  if (videoSrc && videoSrc.indexOf('mp4') !== -1) {
+    return;
+  }
+
   // try getting the lazy data-src first since img.src sould be placeholder svg
   video.poster = img.getAttribute('data-src') || img.src;
   video.loop = true;
@@ -9,7 +15,7 @@ function createVideoFromImg(img) {
   video.autoplay = true;
   video.preload = 'auto';
 
-  source.src = img.getAttribute('data-video');
+  source.src = videoSrc;
   source.type = 'video/mp4';
 
   video.appendChild(source);

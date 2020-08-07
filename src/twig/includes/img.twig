@@ -1,0 +1,23 @@
+{% block responsive_img %}
+  {% set image = image_styles[name]|exists(name) %}
+
+  {% set attrs = image|getResponsiveImage %}
+
+  {% if not env.production %}
+    <!-- image style: {{name}} -->
+  {% endif %}
+
+  <img
+    src="{{ attrs.src|default(src) }}"
+
+    {% if attrs.srcset %}
+      srcset="{{ attrs.srcset }}"
+    {% endif %}
+
+    {% if attrs.sizes %}
+      sizes="{{ attrs.sizes }}"
+    {% endif %}
+
+    alt=""
+  />
+{% endblock %}
