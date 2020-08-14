@@ -6,18 +6,24 @@
   text-align: center;
   border-top: 2px solid $black;
   line-height: $leading-heading;
-  margin-bottom: $space-9;
+  margin-bottom: $space-6;
   padding-top: $space-2;
+  @include breakpoint(md) {
+    margin-bottom: $space-8;
+  }
+  @include breakpoint(lg) {
+    margin-bottom: $space-9;
+  }
 }
 
 .stories__section {
-  margin-bottom: $space-8;
+  margin-bottom: $space-6;
   display: flex;
   flex-direction: column;
 }
 
 .stories__title {
-  margin-bottom: $space-3;
+  margin-bottom: $space-4;
 
   @include breakpoint(md) {
     margin-bottom: $space-5;
@@ -71,13 +77,4 @@
 .stories__grid--tertiary {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-}
-
-.stories__grid--primary,
-.stories__grid--secondary {
-  .post__title {
-    @include breakpoint(md) {
-      font-size: $text-8;
-    }
-  }
 }

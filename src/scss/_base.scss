@@ -19,6 +19,8 @@ body {
   line-height: $leading-body;
   background-color: $white;
   padding-top: var(--header-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
