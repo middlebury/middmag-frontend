@@ -12,7 +12,7 @@
 }
 
 .post__media {
-  margin-bottom: $space-2;
+  margin-bottom: $space-3;
   flex: 0 0 auto; // fixes ie11 where posts get tall
 }
 
@@ -244,6 +244,10 @@ $post-box-alignments: (
 
   @include breakpoint(md) {
     margin-top: $space-4;
+    margin-bottom: $space-7;
+  }
+  @include breakpoint(lg) {
+    margin-bottom: $space-8;
   }
 }
 
@@ -271,7 +275,7 @@ $post-box-alignments: (
   @include breakpoint(lg) {
     height: 100vh; // ie11 fallback
     height: calc(100vh - var(--header-height));
-    margin-bottom: $space-9;
+    margin-bottom: $space-8;
     min-height: 30rem;
   }
 
@@ -290,10 +294,6 @@ $post-box-alignments: (
     font-weight: $font-normal;
 
     @include breakpoint(md) {
-      font-size: $text-9;
-    }
-
-    @include breakpoint(lg) {
       font-size: $text-10;
     }
   }
@@ -301,7 +301,8 @@ $post-box-alignments: (
   .post__text {
     margin-bottom: $space-5;
     @include breakpoint(md) {
-      font-size: $text-4;
+      font-size: $text-5;
+      margin-bottom: $space-6;
     }
   }
 }

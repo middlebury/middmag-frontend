@@ -1,12 +1,14 @@
 .meta {
   display: flex;
   margin-bottom: $space-2;
+  @include breakpoint(lg) {
+    margin-bottom: $space-3;
+  }
 }
 
 .meta__list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: $space-2;
 
   &:not(:last-child) {
     border-right: 1px solid $black;

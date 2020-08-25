@@ -1,12 +1,13 @@
 .pullquote {
-  padding-top: $space-3;
-  padding-bottom: $space-3;
+  padding-top: $space-2;
+  padding-bottom: $space-2;
   border-top: 1px solid $color-navy;
   border-bottom: 1px solid $color-navy;
   color: $color-keppel;
   font-family: $font-sans;
   font-size: $text-6;
   font-weight: $font-light;
+  line-height: $leading-lg;
 }
 
 .pullquote--marks {
