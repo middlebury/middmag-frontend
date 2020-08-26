@@ -16,7 +16,7 @@
     <ul class="footer__social">
       {% for item in social_menu %}
         <li class="footer__item">
-          <a href="{{ item.url }}" class="footer__link">
+          <a href="{{ item.url }}">
             <span class="sr-only">{{ item.text }}</span>
             {% include 'includes/icon.twig' with {
               name: item.icon,
