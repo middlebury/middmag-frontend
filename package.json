@@ -17,7 +17,7 @@
     "swiper": "^6.0.4"
   },
   "devDependencies": {
-    "@middlebury/gulp-config": "^0.3.5",
+    "@middlebury/gulp-config": "^0.3.6",
     "gulp": "^4.0.2",
     "prettier-plugin-twig-melody": "^0.4.6",
     "svg-sprite": "^1.5.0"
