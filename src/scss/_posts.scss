@@ -34,4 +34,7 @@
 
 .posts__item {
   margin-bottom: $space-4;
+  @include breakpoint(lg) {
+    margin-bottom: $space-5;
+  }
 }

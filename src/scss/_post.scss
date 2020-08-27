@@ -83,12 +83,17 @@
 .post__title {
   @include heading;
   color: $color-navy;
-  font-size: $text-8;
+  font-size: $text-6;
   margin-bottom: $space-2;
   font-weight: $font-bold;
 
+  @include breakpoint(md) {
+    font-size: $text-8;
+  }
+
   .post--sticky & {
     font-weight: $font-normal;
+    font-size: $text-8;
     @include breakpoint(md) {
       font-weight: $font-bold;
     }
