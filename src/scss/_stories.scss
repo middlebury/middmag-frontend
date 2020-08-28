@@ -8,6 +8,7 @@
   line-height: $leading-heading;
   margin-bottom: $space-6;
   padding-top: $space-2;
+
   @include breakpoint(md) {
     margin-bottom: $space-8;
   }
@@ -20,17 +21,20 @@
   margin-bottom: $space-6;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(md) {
+    margin-bottom: $space-7;
+  }
+  @include breakpoint(lg) {
+    margin-bottom: $space-8;
+  }
 }
 
 .stories__title {
   margin-bottom: $space-4;
 
-  @include breakpoint(md) {
-    margin-bottom: $space-5;
-  }
-
   @include breakpoint(lg) {
-    margin-bottom: $space-6;
+    margin-bottom: $space-5;
   }
 
   a {
