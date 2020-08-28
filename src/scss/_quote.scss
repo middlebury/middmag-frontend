@@ -35,6 +35,10 @@ $quote-border-width: 4px;
   margin-bottom: $space-3;
   position: relative;
 
+  @include breakpoint(md) {
+    font-size: $text-7;
+  }
+
   &:before {
     content: '“';
     position: absolute;
