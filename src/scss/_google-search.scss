@@ -116,10 +116,8 @@ $border-color: $gray;
 
   // results time
   .gsc-above-wrapper-area {
-    border-bottom: 1px solid $border-color;
     padding: 0;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
+    border: 0;
   }
 
   // results time text
@@ -144,8 +142,11 @@ $border-color: $gray;
   .gsc-result {
     border: 0;
     padding: 0;
+    border-top: 1px solid $black;
     border-bottom: 1px solid $black;
-    margin-bottom: $space-6;
+    padding-top: $space-3;
+    margin-bottom: $space-7;
+    margin-top: $space-7;
   }
 
   /* item title */
@@ -156,9 +157,9 @@ $border-color: $gray;
 
   .gs-title {
     @include h2;
-    color: $color-sky;
     text-decoration: none;
     font-weight: $font-semibold;
+    @include link;
 
     b {
       font-weight: inherit;
@@ -169,7 +170,6 @@ $border-color: $gray;
 
     &:hover {
       text-decoration: none;
-      color: $color-navy;
     }
   }
 
