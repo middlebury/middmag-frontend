@@ -1,0 +1,12 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+  <article class="page">
+    <h1 class="page__title">
+      Search
+    </h1>
+    <div class="page__body container container--sm">
+      {% include 'includes/google-search.twig' %}
+    </div>
+  </article>
+{% endblock %}

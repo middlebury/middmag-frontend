@@ -1,0 +1,285 @@
+$border-color: $gray;
+
+#___gcse_0 {
+  .gsc-control-cse {
+    padding: 0;
+    margin-bottom: $space-10;
+  }
+
+  /* search input + search button container */
+
+  .gsc-search-box {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+
+  .gsc-input-box {
+    border: 1px solid $border-color;
+    padding: 0;
+    border-radius: 0;
+
+    &:focus-within {
+      border-color: $color-navy;
+    }
+  }
+
+  // text field
+  .gsib_a {
+    padding: 1rem;
+    line-height: 1;
+  }
+
+  // clear button
+  .gsib_b {
+    line-height: 1;
+    padding: 1rem;
+  }
+
+  // clear x icon
+  .gsst_a,
+  .gsst_b {
+    padding: 0;
+  }
+
+  // x icon
+  .gscb_a {
+    font-size: 24px;
+    line-height: 16px;
+    color: $color-navy;
+  }
+
+  // space between input and search button
+  td.gsc-input {
+    padding-right: 0;
+  }
+
+  // search input field
+  input.gsc-input {
+    padding: 0.5rem;
+    font-family: $font-sans;
+    background-position: 0.5rem;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  // search submit button
+  button.gsc-search-button {
+    font-family: $font-sans;
+    font-size: $text-3;
+    font-weight: $font-normal;
+    background-color: $black;
+    padding: $space-3 $space-4;
+    height: auto;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 0;
+    border: 0px solid $black;
+  }
+
+  /* filter tabs */
+
+  .gsc-tabsArea {
+    border-bottom: 4px solid $color-navy;
+    margin-bottom: 1rem;
+    border-radius: 0;
+
+    .gsc-tabHeader {
+      font-size: 16px;
+      padding: 0.5rem 0;
+      font-weight: $font-medium;
+      text-transform: none;
+      margin-right: 1.5rem;
+      margin-top: 0;
+      border-top: 1px solid transparent;
+      border-bottom: 0;
+      line-height: inherit;
+
+      &:not(.gsc-tabhActive):hover {
+        // background-color: $gray-light;
+        border-color: $color-navy;
+      }
+    }
+
+    .gsc-tabHeader.gsc-tabhInactive {
+      background: none;
+      color: $color-navy;
+      border: 0;
+    }
+
+    .gsc-tabhActive {
+      border-color: $color-navy;
+    }
+  }
+
+  /* result timestamp */
+
+  // results time
+  .gsc-above-wrapper-area {
+    border-bottom: 1px solid $border-color;
+    padding: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  // results time text
+  .gsc-result-info {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #000;
+    font-family: $font-sans;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Search result container */
+
+  .gsc-results {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Search result item */
+
+  .gsc-result {
+    border: 0;
+    padding: 0;
+    border-bottom: 1px solid $black;
+    margin-bottom: $space-6;
+  }
+
+  /* item title */
+
+  .gsc-thumbnail-inside {
+    padding: 0;
+  }
+
+  .gs-title {
+    @include h2;
+    color: $color-sky;
+    text-decoration: none;
+    font-weight: $font-semibold;
+
+    b {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: currentColor;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $color-navy;
+    }
+  }
+
+  /* search result item url */
+
+  .gsc-url-top {
+    padding: 0;
+  }
+
+  .gs-visibleUrl {
+    font-family: $font-sans;
+    font-size: $text-3;
+    padding: 0;
+    margin-bottom: $space-3;
+    color: $color-navy;
+  }
+
+  /* search result item image and snippet */
+
+  .gsc-table-result {
+    padding: 0;
+  }
+
+  /* image */
+
+  .gs-web-image-box {
+    padding: 0;
+    margin-right: $space-3;
+    margin-bottom: $space-3;
+    width: auto;
+  }
+
+  .gs-image {
+    border: 0;
+    max-width: 100px;
+  }
+
+  .gsc-table-cell-thumbnail {
+    padding: 0;
+  }
+
+  /* snippet */
+
+  .gs-fileFormat {
+    margin-bottom: $space-2;
+    font-size: $text-2;
+    font-family: $font-sans;
+  }
+
+  .gs-snippet {
+    font-family: $font-sans;
+    font-size: $text-4;
+    line-height: $leading-body;
+    margin: 0;
+  }
+
+  .gs-per-result-labels {
+    font-family: $font-sans;
+    margin-top: 0.5rem;
+  }
+
+  /* pagination */
+
+  .gsc-cursor-box {
+    margin: 0;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-top: 16px solid $black;
+    padding-top: $space-2;
+  }
+
+  .gsc-cursor-page {
+    font-weight: $font-semibold;
+    font-size: $text-2;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 2px solid $color-sky;
+
+    @include link;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .gsc-cursor-current-page {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 0;
+  }
+
+  .gs-promotion .gs-visibleUrl {
+    color: $black;
+  }
+
+  /* branded parts */
+
+  .gcsc-more-maybe-branding-root {
+    a {
+      color: $color-navy;
+    }
+  }
+
+  // search for <term> on google link
+  .gcsc-find-more-on-google {
+    margin: 0;
+  }
+
+  // powered by
+  .gcsc-branding {
+  }
+}

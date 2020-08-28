@@ -5,22 +5,25 @@
     <h1 class="page__title">
       Page title here
     </h1>
-    <div class="page__body container container--sm rich-text">
-      {% for i in 2..5 %}
-        <h{{i}}> heading</h{{i}}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          magnam dolorem quod <a href="">distinctio nisi</a> exercitationem dolores vitae sit
-          fugiat quam dolor alias, expedita recusandae tempore laborum sint
-          molestiae tempora nesciunt!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          magnam dolorem quod <a href="">distinctio nisi</a> exercitationem dolores vitae sit
-          fugiat quam dolor alias, expedita recusandae tempore laborum sint
-          molestiae tempora nesciunt!
-        </p>
-      {% endfor %}
+    <div class="page__body container container--sm ">
+      {# separate class so search page can doesn't inherit styles from rich-text #}
+      <div class="rich-text">
+        {% for i in 2..5 %}
+          <h{{i}}> heading</h{{i}}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+            magnam dolorem quod <a href="">distinctio nisi</a> exercitationem dolores vitae sit
+            fugiat quam dolor alias, expedita recusandae tempore laborum sint
+            molestiae tempora nesciunt!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+            magnam dolorem quod <a href="">distinctio nisi</a> exercitationem dolores vitae sit
+            fugiat quam dolor alias, expedita recusandae tempore laborum sint
+            molestiae tempora nesciunt!
+          </p>
+        {% endfor %}
+      </div>
     </div>
   </article>
 {% endblock %}
