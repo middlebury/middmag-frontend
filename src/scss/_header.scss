@@ -113,7 +113,8 @@
   @include small-caps;
   color: $white;
   padding: $space-3;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-top: -$space-3;
   margin-bottom: -$space-3;
 
@@ -123,12 +124,12 @@
 }
 
 .header__btn-text {
-  margin-left: $space-2;
   @include sr-only;
 
   @include breakpoint(sm) {
     @include not-sr-only;
-    display: inline;
+    display: inline-block;
+    margin-left: $space-2;
   }
 }
 
