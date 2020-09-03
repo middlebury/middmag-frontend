@@ -1,10 +1,4 @@
-{% set classes = [
-  'block',
-  'block--spaced',
-  'block--wide',
-  right ? 'block--right' : left ? 'block--left' : '',
-  full ? 'block--full' : ''
-] %}
+{% set classes = ['block', 'block--spaced', 'block--wide'] %}
 
 <div class="{{ classes|join(' ') }}">
   <div class="media">
