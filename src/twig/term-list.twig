@@ -11,6 +11,7 @@
           {% for i in 1..6 %}
             <li class="posts__item">
               {% include 'includes/post-teaser.twig' with {
+                image_name: 'post_list',
                 show_meta: true
               } %}
               {# TODO: we need to decide if we're continuing to show post content on the term list view #}

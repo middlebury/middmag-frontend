@@ -28,11 +28,8 @@ const getResponsiveImageStyles = img => {
     ? img.sizes
     : `(max-width: ${width}px) 100vw, ${width}px)`;
 
-  const zoom = buildSrcSet(img.zoom);
-
   const attrs = {
-    src,
-    zoom
+    src
   };
 
   if (srcset.length > 1) {

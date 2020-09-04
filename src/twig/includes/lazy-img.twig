@@ -1,7 +1,7 @@
 {% set width = width|default(768) %}
 {% set height = height|default(432) %}
 
-{% set image_name = name|default('post') %}
+{% set image_name = image_name|default('post') %}
 {% set image = image_styles[image_name]|exists(image_name) %}
 {% set attrs = image|getResponsiveImage %}
 
@@ -13,7 +13,7 @@
 %}
 
 {% if not env.production %}
-  <!-- image style: {{name}} -->
+  <!-- image style: {{image_name}} -->
 {% endif %}
 
 {# TODO: lazy image should check if screen is >md display before lazy loading image or swapping for mp4 video #}
@@ -21,7 +21,7 @@
   data-src="{{ attrs.src }}"
   data-srcset="{{ attrs.srcset }}"
   sizes="{{ attrs.sizes }}"
-  {% if video != '' %}
+  {% if video is not empty %}
     data-video="{{ video }}"
   {% endif %}
   class="lazyload {{ video ? 'js-video-bg' : '' }}"
