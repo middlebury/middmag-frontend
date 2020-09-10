@@ -4,7 +4,7 @@ function createVideoFromImg(img) {
 
   const videoSrc = img.getAttribute('data-video');
 
-  if (videoSrc && videoSrc.indexOf('mp4') !== -1) {
+  if (!videoSrc) {
     return;
   }
 
