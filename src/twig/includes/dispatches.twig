@@ -1,7 +1,11 @@
 <div class="dispatches swiper-container js-dispatches">
   <ul class="swiper-wrapper">
     {% for item in 0..5 %}
-      <li class="swiper-slide">{% include 'includes/post-teaser.twig' %}</li>
+      <li class="swiper-slide">
+        {% include 'includes/post-teaser.twig' with {
+          image_name: 'post_xs'
+        } %}
+      </li>
     {% endfor %}
 
     <li class="swiper-slide dispatches-more"><a href="">View all</a></li>

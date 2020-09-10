@@ -4,7 +4,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "gulp dev",
-    "build": "gulp build",
+    "build": "AUTOPREFIXER_GRID=autoplace gulp build",
     "build:icons": "svg-sprite --shape-id-generator=\"icon-%s\" --symbol --svg-xmldecl=false --symbol-dest='' --symbol-sprite=icons.twig --dest=src/twig/includes src/icons/*.svg",
     "format:build": "prettier dist/**/*.html",
     "deploy": "gulp deploy"

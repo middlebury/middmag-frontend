@@ -28,13 +28,14 @@
         <figure class="post__media post__media--hero">
           {% include 'includes/lazy-video.twig' with {
             href: 'https://player.vimeo.com/video/420511968?dnt=1&app_id=122963',
-            src: 'http://middleburymagazine.com/files/2020/05/Screen-Shot-2020-05-26-at-11.55.52-AM-880x491.png'
+            image_name: 'post_hero'
           } %}
         </figure>
       </div>
     {% elseif post_mp4 %}
       <figure class="post__media post__media--full">
         {% include 'includes/lazy-img.twig' with {
+          image_name: 'post_xl',
           src: 'http://middleburymagazine.com/files/2018/10/field.jpeg',
           video: 'http://sandcat.middlebury.edu/comm/middmag-videos/wine.mp4'
         } %}
@@ -42,6 +43,7 @@
     {% elseif post_feature %}
       <figure class="post__media post__media--full">
         {% include 'includes/lazy-img.twig' with {
+          image_name: 'post_xl',
           src: 'http://middleburymagazine.com/files/2020/07/feature_FrostShelter_opener-1920x1080.jpg'
         } %}
       </figure>
@@ -49,6 +51,7 @@
       <div class="container container--md">
         <figure class="post__media post__media--hero">
           {% include 'includes/lazy-img.twig' with {
+            image_name: 'post_hero',
             src: 'http://placehold.it/864x486'
           } %}
         </figure>
@@ -102,15 +105,17 @@
       {% include 'blocks/video.twig' %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/text.twig' %}
-      {% include 'blocks/image.twig' %}
+      {% include 'blocks/image.twig' with {
+        image_name: 'image'
+      } %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/image.twig' with {
-        src: 'http://middleburymagazine.com/files/2017/07/6-objects-12.jpg',
+        image_name: 'image_floated',
         right: true
       } %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/image.twig' with {
-        src: 'http://middleburymagazine.com/files/2017/07/4-objects-7.jpg',
+        image_name: 'image_floated',
         left: true
       } %}
       {% include 'blocks/text.twig' %}
@@ -120,7 +125,7 @@
       } %}
       {% include 'blocks/text.twig' %}
       {% include 'blocks/image.twig' with {
-        src: 'http://middleburymagazine.com/files/2017/07/13-objects-23-24-25-26c-1920x1080.jpg',
+        image_name: 'post_xl',
         full: true
       } %}
       {% include 'blocks/text.twig' %}

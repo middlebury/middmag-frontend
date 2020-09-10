@@ -49,3 +49,69 @@ social_menu:
   - text: Middlebury Magazine on Twitter
     icon: twitter
     url: https://twitter.com/middleburymag
+
+image_styles:
+  # posts in dispatches carousel
+  post_xs:
+    srcset:
+      - 288x162
+      - 416x234
+    sizes: '(min-width: 500px) 288px, 100w'
+  # default post in term grid and recent stories
+  post:
+    srcset:
+      - 416x234
+      - 640x360
+      - 768x432
+    sizes: '(max-width: 768px) 100vw, 400px'
+  # featured image (non-full width) on a post page
+  post_hero:
+    srcset:
+      - 416x234
+      - 640x360
+      - 768x432
+      - 832x468
+  # term list post images
+  post_list:
+    srcset:
+      - 416x234
+      - 608x342
+  # feature posts in recent stories
+  post_lg:
+    srcset:
+      - 416x234
+      - 608x342
+      - 640x360
+      - 768x432
+    sizes: '(max-width: 768px) 100vw, 600px'
+  # Full width sticky and feature post image.
+  # Also full width images in post content
+  post_xl:
+    srcset:
+      - 416x234
+      - 640x360
+      - 768x432
+      - 1024x576
+      - 1280x720
+      - 1600x900
+      - 1920x1080
+      - 2560x1440
+
+  # component image styles
+  image:
+    srcset:
+      - 416x234
+      - 640x360
+      - 768x432
+      - 832x468
+  # image with text component
+  image_text:
+    srcset:
+      - 300x300
+  image_floated:
+    srcset:
+      - 416x234
+  slideshow_multiple:
+    srcset:
+      - 416x234
+      - 640x360

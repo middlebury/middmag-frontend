@@ -1,6 +1,7 @@
 .media {
   @include breakpoint(md) {
     display: flex;
+    align-items: flex-start;
   }
 
   img {

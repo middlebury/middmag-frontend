@@ -85,9 +85,11 @@
   .post__info {
     border: 0;
     display: block;
+    padding-bottom: 0;
   }
 
   .post__date {
     text-align: left;
+    margin-top: $space-2;
   }
 }

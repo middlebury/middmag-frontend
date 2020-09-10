@@ -7,17 +7,11 @@
   full ? 'block--full' : ''
 ] %}
 
-{% set src =
-  src|default(
-    'http://middleburymagazine.com/files/2017/07/1-objects-1-2-3-4.jpg'
-  )
-%}
-
 <div class="{{ classes|join(' ') }}">
   <div class="block__content">
     <figure class="block__media">
       {% include 'includes/lazy-img.twig' with {
-        src: src
+        image_name: image_name|default('image')
       } %}
       <figcaption class="block__caption">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit

@@ -12,6 +12,11 @@ const cmds = createConfig({
     src: './src/images/*.{jpg,png,svg}',
     watch: './src/images/*.{jpg,png,svg}',
     dest: './dist/images'
+  },
+  twig: {
+    parserOptions: {
+      filters: require('./twig-filters')
+    }
   }
 });
 

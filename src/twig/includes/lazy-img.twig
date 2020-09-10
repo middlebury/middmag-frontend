@@ -1,15 +1,35 @@
 {% set width = width|default(768) %}
 {% set height = height|default(432) %}
 
+{% set image_name = image_name|default('post') %}
+{% set image = image_styles[image_name]|exists(image_name) %}
+{% set attrs = image|getResponsiveImage %}
+
+{% set svg_src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 "
+  ~ width
+  ~ ' '
+  ~ height
+  ~ "'/%3E"
+%}
+
+{% if not env.production %}
+  <!-- image style: {{image_name}} -->
+{% endif %}
+
 {# TODO: lazy image should check if screen is >md display before lazy loading image or swapping for mp4 video #}
-<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 {{
-  width
-  }} {{ height }}'/%3E"
-  data-src="{{ src }}"
-  data-video="{{ video }}"
+<img src="{{ svg_src }}"
+  data-src="{{ attrs.src }}"
+  data-srcset="{{ attrs.srcset }}"
+  sizes="{{ attrs.sizes }}"
+  {% if video is not empty %}
+    data-video="{{ video }}"
+  {% endif %}
   class="lazyload {{ video ? 'js-video-bg' : '' }}"
   alt="" />
 
 <noscript>
-  <img src="{{ src }}" alt="" />
+  <img src="{{ attrs.src }}"
+    srcset="{{ attrs.srcset }}"
+    sizes="{{ attrs.sizes }}"
+    alt="" />
 </noscript>

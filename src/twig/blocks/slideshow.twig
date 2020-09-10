@@ -21,9 +21,7 @@
     {% for i in 0..3 %}
       <figure class="slideshow__item swiper-slide">
         {% include 'includes/lazy-img.twig' with {
-          src: multiple
-            ? 'https://placehold.it/600x900'
-            : 'https://placehold.it/1440x810'
+          image_name: multiple ? 'slideshow_multiple' : 'post_xl'
         } %}
 
         <figcaption class="block__caption">
