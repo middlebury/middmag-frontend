@@ -308,7 +308,7 @@ $post-box-alignments: (
   .post__text {
     margin-bottom: $space-5;
     @include breakpoint(md) {
-      font-size: $text-5;
+      font-size: $text-4;
       margin-bottom: $space-6;
     }
   }
