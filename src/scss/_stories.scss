@@ -45,11 +45,12 @@
     @include small-caps;
     line-height: $leading-heading;
     font-size: $text-2;
+    font-weight: $font-bold;
     color: $white;
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
     padding-top: $space-2;
-    padding-bottom: $space-2;
+    padding-bottom: 0.325rem;
     transition: background 0.2s;
 
     &:focus,
