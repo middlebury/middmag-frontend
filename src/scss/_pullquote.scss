@@ -5,9 +5,9 @@
   border-bottom: 1px solid $color-navy;
   color: $color-keppel;
   font-family: $font-sans;
-  font-size: $text-6;
+  font-size: $text-8;
   font-weight: $font-light;
-  line-height: $leading-lg;
+  line-height: 1.25;
 }
 
 .pullquote--marks {
@@ -17,10 +17,10 @@
   &:before {
     content: '“';
     font-weight: $font-light;
-    font-size: $text-7;
+    font-size: $text-8;
     font-family: $font-serif;
     position: absolute;
-    top: $space-2;
+    top: $space-1;
     left: 0;
   }
 }
