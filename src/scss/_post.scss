@@ -37,6 +37,7 @@
 }
 
 .post__date {
+  flex-shrink: 0;
   font-size: $text-2;
   font-weight: $font-normal;
   line-height: $leading-heading;
@@ -63,7 +64,7 @@
 .post__box {
   @include breakpoint(md) {
     display: grid;
-    grid-template-columns: 1fr 100px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 100px 1fr;
     height: 100%;
     align-items: center;
@@ -85,7 +86,7 @@
   @include heading;
   color: $color-navy;
   font-size: $text-6;
-  margin-bottom: $space-2;
+  margin-bottom: 0.875rem;
   font-weight: $font-bold;
 
   @include breakpoint(md) {
@@ -94,16 +95,15 @@
 
   .post--sticky & {
     font-weight: $font-normal;
-    font-size: $text-8;
+    font-size: 3.5rem;
     @include breakpoint(md) {
       font-weight: $font-bold;
     }
     @include breakpoint(lg) {
-      font-weight: $font-normal;
+      font-weight: $font-medium;
     }
   }
 
-  .post--sticky &,
   .stories__grid--primary &,
   .stories__grid--secondary & {
     @include breakpoint(lg) {
@@ -120,8 +120,8 @@
 
   .stories__grid--primary &,
   .stories__grid--secondary &,
-  .stories__grid--tertiary {
-    font-weight: $font-medium;
+  .stories__grid--tertiary & {
+    font-weight: $font-semibold;
   }
 }
 
@@ -150,6 +150,11 @@
     font-size: $text-4;
   }
 
+  .post--sticky & {
+    font-size: $text-3;
+    margin-bottom: $space-3;
+  }
+
   .stories__grid--primary &,
   .stories__grid--secondary & {
     @include breakpoint(lg) {
@@ -159,7 +164,7 @@
 
   .stories__grid--primary &,
   .stories__grid--secondary &,
-  .stories__grid--tertiary {
+  .stories__grid--tertiary & {
     font-size: $text-3;
   }
 }

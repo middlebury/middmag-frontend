@@ -79,7 +79,14 @@
   }
 
   .post__title {
-    font-size: $text-5;
+    font-size: $text-6;
+    font-weight: $font-bold;
+  }
+
+  .post__text {
+    @include breakpoint(lg) {
+      font-size: $text-3;
+    }
   }
 
   .post__info {
