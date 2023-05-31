@@ -2,7 +2,7 @@
 
 ## Requires
 
-- node 12.x
+- node 18.x
 
 ## Getting started
 
